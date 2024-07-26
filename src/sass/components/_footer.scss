@@ -9,9 +9,7 @@ footer {
     padding-bottom: 2em;
 
     position: relative;
-
-    // background-color: hsl(var(--clr-primary-550));
-    background-color: hsl(var(--clr-secondary-525));
+    background-color: hsl(var(--clr-primary-450));
 
     font-family: var(--ff-sans) !important;
     color: hsl(var(--clr-neutral-100));
@@ -43,7 +41,6 @@ footer {
 footer .tagline {
     width: 100vw;
     text-align: center;
-    // background-color: hsl(var(--clr-primary-450));
     background-color: hsl(var(--clr-secondary-450));
     font-size: var(--fs-350);
     line-height: 1.2;
