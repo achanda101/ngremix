@@ -8,6 +8,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 4.0px 6.0px 1px hsl(0deg 0% 0% / 0.4);
+
     img {
       width: 100%;
       height: auto;
@@ -26,6 +27,7 @@
     font-family: var(--ff-sans);
     font-size: var(--fs-400);
     text-align: center;
+
     .caption-uppercase {
       text-transform: uppercase;
     }
@@ -33,8 +35,9 @@
 
   &:hover {
     img {
-        transform: scale(1.08);
-    } 
+      transform: scale(1.08);
+    }
+
     cursor: pointer;
   }
 
@@ -43,13 +46,15 @@
       -webkit-filter: grayscale(0);
       filter: grayscale(0);
     }
+
     .image-caption {
-      color: hsl(var(--clr-secondary-550))
+      color: hsl(var(--clr-primary-450))
     }
+
     &:hover {
       img {
         transform: scale(1);
-    } 
+      }
     }
   }
 }
@@ -71,6 +76,7 @@
 #managers.img-text-combo-grid:nth-child(1) {
   grid-area: manager-one;
 }
+
 #managers.img-text-combo-grid:nth-child(2) {
   grid-area: manager-two;
 }
@@ -79,17 +85,19 @@
   @extend .grid;
   grid-template-columns: 100%;
   grid-template-areas:
-          "manager-one"
-          "manager-two";
+    "manager-one"
+    "manager-two";
 }
 
 @include mq(medium) {
   #chairperson-bio.text-card {
     grid-area: manager-common-bio;
   }
+
   #manager-bio.text-card {
     grid-area: manager-common-bio;
   }
+
   #managers.img-text-combo-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -101,15 +109,19 @@
 #trustees.img-text-combo-grid:nth-child(1) {
   grid-area: trustee-one;
 }
+
 #trustees.img-text-combo-grid:nth-child(2) {
   grid-area: trustee-two;
 }
+
 #trustees.img-text-combo-grid:nth-child(3) {
   grid-area: trustee-three;
 }
+
 #trustees.img-text-combo-grid:nth-child(4) {
   grid-area: trustee-four;
 }
+
 #trustees.img-text-combo-grid:nth-child(5) {
   grid-area: trustee-five;
 }
@@ -118,30 +130,35 @@
   @extend .grid;
   grid-template-columns: 100%;
   grid-template-areas:
-          "trustee-one"
-          "trustee-two"
-          "trustee-three"
-          "trustee-four"
-          "trustee-five";
+    "trustee-one"
+    "trustee-two"
+    "trustee-three"
+    "trustee-four"
+    "trustee-five";
 }
 
 @include mq(medium) {
   #trustee1-bio.text-card {
     grid-area: trustee-common-bio;
   }
+
   #trustee2-bio.text-card {
     grid-area: trustee-common-bio;
   }
+
   #trustee3-bio.text-card {
     grid-area: trustee-common-bio;
   }
+
   #trustee4-bio.text-card {
     grid-area: trustee-common-bio;
   }
+
   #trustee5-bio.text-card {
     grid-area: trustee-common-bio;
   }
-  #trustees.img-text-combo-grid { 
+
+  #trustees.img-text-combo-grid {
     grid-gap: 0.75rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas:

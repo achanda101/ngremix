@@ -103,7 +103,7 @@
 
     li .nav-item-name.active {
         text-underline-offset: 0.25rem !important;
-        text-decoration: 2px underline hsl(var(--clr-secondary-550)) !important;
+        text-decoration: 2px underline hsl(var(--clr-primary-450)) !important;
     }
 }
 
@@ -271,13 +271,13 @@
         &::before {
             content: "";
             margin-right: 5px;
-            border-left: 2px solid hsl(var(--clr-secondary-550));
+            border-left: 2px solid hsl(var(--clr-primary-450));
         }
 
         &::after {
             content: "";
             margin-left: 5px;
-            border-right: 2px solid hsl(var(--clr-secondary-550));
+            border-right: 2px solid hsl(var(--clr-primary-450));
         }
     }
 

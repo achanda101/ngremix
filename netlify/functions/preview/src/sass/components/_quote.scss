@@ -1,10 +1,11 @@
 @use '../abstracts/' as *;
 
 .pullquote {
-    color: hsl(var(--clr-secondary-550));
+    color: hsl(var(--clr-primary-450));
     font-family: var(--ff-serif);
     font-size: var(--fs-575);
     line-height: 1.25;
+
     @include mqmax(medium) {
         text-align: center !important;
     }
