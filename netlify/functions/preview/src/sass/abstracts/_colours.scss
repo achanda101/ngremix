@@ -3,11 +3,12 @@
 // accent: salmon
 // --------
 // primary-450: primary-bg (Sanity: Brick Red)
+// primary-900: logo
 // --------
 // secondary-450: tagline bg
 // secondary-500: nav item in the top menu
 // secondary-525: footer bg (Sanity: NG Red)
-// secondary-550: h1, h2, active nav item, underline nav item, red body text
+// secondary-550: h1, h2, h3, active nav item, underline nav item, red body text
 // --------
 // accent-200: salmon (Sanity: Salmon Pink)
 
@@ -36,8 +37,8 @@ $colours: (
 		575: 0 86% 30%,
 		860: 0 86% 28%,
 		700: 0 86% 26%,
-		800: 0 86% 24%,
-		900: 0 86% 22%,
+		800: 0 86% 22%,
+		900: 0 100% 37.3%,
 	),
 	secondary: (100: 357 75% 90%,
 		200: 357 75% 80%,
