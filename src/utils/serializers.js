@@ -63,6 +63,9 @@ module.exports = {
             return `<div class="image-plus top-flow"><picture><source type="image/webp" srcset="${webpURLs[ "mob" ]} 560w, ${webpURLs[ "tab" ]} 768w, ${webpURLs[ "desk" ]} 1046w" sizes="${sizes}">
             <img alt="${image.alt}" loading="${loadingOption}" decoding="${decoding}" src="${webpURLs[ "mob" ]}" width="${widths[ "desk" ]}" height="${desk_h}"></picture><div class="credit" data-image-credit="${image.credit}" ></div></div>`
         },
+        a11yImageTimeline: ({ node }) => {
+
+        },
         imageSlider: ({ node }) => {
             pageSettings.setSlider()
             // const aspectRatio = 1046 / 618 // Fixed for slider images
@@ -221,19 +224,20 @@ module.exports = {
         },
         timeline: ({ node }) => {
             pageSettings.setTimeline()
-            // const eventsList = node.timelineArray
-            // const timelineHtml = new Array()
+            const eventsList = node.timelineArray
+            const timelineHtml = new Array()
 
-            // for (const event of eventsList) {
-            //     const eventDate = event.timelineEventDate
-            //     const eventContent = BlocksToMarkdown(event.content, {
-            //         serializersTimeline,
-            //         ...client.config()
-            //     })
-            //     const modifiedEventContent = formatPopupContent(eventContent)
-            // }
+            for (const event of eventsList) {
+                const eventDate = event.timelineEventDate
+                const eventContent = BlocksToMarkdown(event.content, {
+                    serializers,
+                    ...client.config()
+                })
+                console.log(eventDate)
+                //     const modifiedEventContent = formatPopupContent(eventContent)
+            }
 
-            return `<h3>Timeline goes here</h3>`
+            return `<h3>Timeline goes here. yoohoo</h3>`
         }
     },
     marks: {
