@@ -1,21 +1,21 @@
 const marquee = document.querySelector('.marquee')
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
-
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//     addAnimation();
+// }
+addAnimation();
 function addAnimation() {
-    marquee.setAttribute("data-animated", true)
+  marquee.setAttribute("data-animated", true)
 
-    const marqueeContent = marquee.querySelector('.marquee-content')
-    const marqueeChildren = Array.from(marqueeContent.children)
+  const marqueeContent = marquee.querySelector('.marquee-content')
+  const marqueeChildren = Array.from(marqueeContent.children)
 
-    marqueeChildren.forEach(item => {
-        const duplicatedItem = item.cloneNode(true)
-        // hide the duplicated item from the screen reader
-        duplicatedItem.setAttribute("aria-hidden", true)
-        marqueeContent.appendChild(duplicatedItem)
-    })
+  marqueeChildren.forEach(item => {
+    const duplicatedItem = item.cloneNode(true)
+    // hide the duplicated item from the screen reader
+    duplicatedItem.setAttribute("aria-hidden", true)
+    marqueeContent.appendChild(duplicatedItem)
+  })
 }
 
 // Click and Drag to Scroll
