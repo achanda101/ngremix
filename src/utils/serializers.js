@@ -233,7 +233,7 @@ module.exports = {
                 //     serializers,
                 //     ...client.config()
                 // })
-                console.log(eventDate)
+                // console.log(eventDate)
                 //     const modifiedEventContent = formatPopupContent(eventContent)
             }
 
