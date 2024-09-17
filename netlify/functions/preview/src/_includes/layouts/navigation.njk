@@ -351,6 +351,14 @@
                             </ul>
                         </div>
                     </li>
+                    <li>
+                        {% if '/fellowships' in page.url %}
+                            <a href="/fellowships"
+                           class="sublist-item-active">Fellowships</a>
+                        {% else %}
+                            <a href="/fellowships">Fellowships</a>
+                        {% endif %}
+                    </li>
                 </ul>
             </div>
         </li>
@@ -413,7 +421,7 @@
                         </div>
                     </li>
                     <li>
-                        {% if '/kula-the-artiste-residence' in page.url %}
+                        {% if '/kula-artistes-residence' in page.url %}
                             <a href="/kula-artistes-residence"
                            class="sublist-item-active">Kula: Artistes’ Residence</a>
                         {% else %}
