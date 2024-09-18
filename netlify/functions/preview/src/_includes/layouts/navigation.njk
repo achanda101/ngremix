@@ -131,8 +131,12 @@
                         {% endif %}
                     </li>
                     <li>
-                        <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656"
-                           target="_blank">Virtual Tour</a>
+                        {% if '/virtualtour' in page.url %}
+                            <a href="/virtualtour"
+                           class="sublist-item-active">Virtual Tour</a>
+                        {% else %}
+                            <a href="/virtualtour">Virtual Tour</a>
+                        {% endif %}
                     </li>
                 </ul>
             </div>
