@@ -19,6 +19,10 @@
     }
 }
 
+.narrow-column :where(:not(:first-child)) {
+    margin-top: var(--flow-spacer-close);
+}
+
 .wide-column {
     grid-area: widecol;
 
@@ -240,6 +244,12 @@
             grid-template-columns: 24% 67% 6%;
             grid-template-areas:
                 "narrowcol widecol spacercol";
+        }
+
+        .image-plus {
+            width: 75% !important;
+            margin-left: auto !important;
+            margin-right: 0 !important;
         }
     }
 
