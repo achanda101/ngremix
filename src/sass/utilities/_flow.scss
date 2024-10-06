@@ -33,9 +33,16 @@
 }
 
 // To compensate for line-height of h1 for 2-columns on mobile
-.flow.flow-titletext-mob {
+.flow-titletext-mob {
 	@include mqmax(small) {
 		padding-top: var(--flow-spacer-h1);
+	}
+}
+
+// to line-up column contents when first line in one column is h1 on desktop
+.flow-titletext-top-pad {
+	@include mq(large) {
+		padding-top: var(--flow-spacer-h1-top-pad);
 	}
 }
 
