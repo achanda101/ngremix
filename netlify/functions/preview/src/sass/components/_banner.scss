@@ -32,7 +32,7 @@
     font-size: var(--fs-200);
     font-family: var(--ff-sans);
     letter-spacing: var(--ls-wide);
-    color: hsl(var(--clr-neutral-100));
+    color: hsl(var(--clr-neutral-300));
 
     right: 2px;
     bottom: 24vh;
@@ -44,7 +44,7 @@
     @include mq(large) {
         bottom: 2vh;
         right: 15px;
-        color: hsl(var(--clr-neutral-275));
+        color: hsl(var(--clr-neutral-300));
         font-weight: var(--fw-light);
         // letter-spacing: var(--ls-normal);
     }
