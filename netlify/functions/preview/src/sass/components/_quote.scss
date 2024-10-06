@@ -5,6 +5,7 @@
     font-family: var(--ff-serif);
     font-size: var(--fs-575);
     line-height: 1.25;
+
     @include mqmax(medium) {
         text-align: center !important;
     }

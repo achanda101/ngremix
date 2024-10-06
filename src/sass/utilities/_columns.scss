@@ -246,10 +246,20 @@
                 "narrowcol widecol spacercol";
         }
 
-        .image-plus {
-            width: 75% !important;
-            margin-left: auto !important;
-            margin-right: 0 !important;
+        @include mq(medium) {
+            .image-plus {
+                width: 85% !important;
+                margin-left: auto !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        @include mq(large) {
+            .image-plus {
+                width: 95% !important;
+                margin-left: auto !important;
+                margin-right: 0 !important;
+            }
         }
     }
 
