@@ -39,8 +39,11 @@
 	}
 }
 
+// to line-up column contents when first line in one column is h1 on desktop
 .flow-titletext-top-pad {
-	padding-top: var(--flow-spacer-h1-top-pad);
+	@include mq(large) {
+		padding-top: var(--flow-spacer-h1-top-pad);
+	}
 }
 
 

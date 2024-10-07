@@ -261,6 +261,16 @@
                 margin-right: 0 !important;
             }
         }
+
+        &.reverse-mob {
+
+            // mobile
+            @include mqmax(medium) {
+                grid-template-areas:
+                    "widecol"
+                    "narrowcol";
+            }
+        }
     }
 
     &.narrow-wide-40-60 {
