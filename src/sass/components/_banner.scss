@@ -1,6 +1,10 @@
 @use '../abstracts/' as *;
 @use '../utilities/chevron' as *;
 
+#banner-container {
+    container-type: inline-size;
+}
+
 #banner-container .banner-image {
     position: absolute;
     top: 0;
