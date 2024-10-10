@@ -27,6 +27,15 @@
         object-fit: cover;
     }
 
+    &.shrink-mob {
+        @include mqmax(small) {
+            width: 75%;
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+    }
+
+
     // mobile
     @include mqmax(medium) {
         //make the image stretch edge-to-edge 
