@@ -243,7 +243,7 @@ $anim-timing: 3s;
 
     @include mq(medium) {
         display: block;
-        bottom: 6vh;
+        bottom: 7vh;
         left: 49%;
     }
 
@@ -252,11 +252,11 @@ $anim-timing: 3s;
     }
 
     @include mq(medium) {
-        bottom: 6vh;
+        bottom: 7vh;
     }
 
     @include mq(large) {
-        bottom: 1vh;
+        bottom: 2vh;
     }
 
     opacity: 0;
