@@ -82,12 +82,14 @@
         animation: none;
 
         .cta-line-lrg {
-            padding-top: 0.5rem;
+            padding-top: 0.8rem;
+            font-size: var(--fs-575);
             font-weight: var(--fw-serif-medium);
         }
 
         .cta-line-sml {
             padding-top: 0;
+            font-size: var(--fs-375);
             font-weight: var(--fw-serif-medium);
         }
 
