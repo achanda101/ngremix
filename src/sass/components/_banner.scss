@@ -32,14 +32,13 @@
 .banner-image-credit {
     position: absolute;
     writing-mode: vertical-rl;
-    z-index: 20;
+    z-index: 50;
     font-size: var(--fs-200);
     font-family: var(--ff-sans);
     letter-spacing: var(--ls-wide);
     color: hsl(var(--clr-neutral-300));
 
     right: 2px;
-    // bottom: 22vh;
     bottom: calc(var(--gap-from-bottom) * 4.5);
 
     @include mq(small) {
@@ -52,6 +51,12 @@
         color: hsl(var(--clr-neutral-300));
         font-weight: var(--fw-light);
         // letter-spacing: var(--ls-normal);
+    }
+
+    // On mobile, >>>>>>>> COMMENT OUT WHEN CTA ABSENT
+    // 1. raise the banner image credit above the CTA red band
+    @include mqmax(small) {
+        bottom: 20vh;
     }
 
     opacity: 0;
@@ -117,6 +122,12 @@
         // background-color: transparent;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
         font-size: var(--fs-525);
+    }
+
+    // On mobile, >>>>>>>> COMMENT OUT WHEN CTA ABSENT
+    // 1. raise the tagline + credit above the CTA red band
+    @include mqmax(small) {
+        bottom: 10vh;
     }
 }
 
