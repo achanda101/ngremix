@@ -94,7 +94,6 @@
     // background-color: rgba(0, 0, 0, 0.25);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75));
 
-    // padding: 1em 0.15em 13vh;
     padding: 1.5em 0.15em 9vh;
 
     font-size: var(--fs-500);
@@ -120,7 +119,13 @@
     }
 }
 
-.banner-tagline-credit {
+.banner-tagline--text {
+    @include mq(large) {
+        max-width: 42vw;
+    }
+}
+
+.banner-tagline--credit {
     font-size: var(--fs-300);
 
     @include mq(medium) {
@@ -241,18 +246,14 @@ $anim-timing: 3s;
     // hide for mobile
     display: none;
 
-    @include mq(medium) {
-        display: block;
-        bottom: 7vh;
-        left: 49%;
-    }
-
     &:hover {
         cursor: pointer;
     }
 
     @include mq(medium) {
-        bottom: 7vh;
+        display: block;
+        bottom: 5vh;
+        left: 49%;
     }
 
     @include mq(large) {

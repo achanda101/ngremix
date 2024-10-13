@@ -1,0 +1,73 @@
+@use '../abstracts/' as *;
+
+.cta {
+    cursor: pointer;
+    height: 15vh;
+    width: fit-content;
+    overflow: hidden;
+    position: absolute;
+    bottom: 5.7vh;
+    right: 3vw;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 0.08rem solid hsl(var(--clr-neutral-300));
+    border-radius: 12px;
+    color: hsl(var(--clr-neutral-100));
+
+    font-family: var(--ff-serif);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        height: 100%;
+        width: auto;
+        border-right: 0.08rem solid hsl(var(--clr-neutral-775));
+    }
+
+    opacity: 0;
+    // Animation -- fade-in + ease-out
+    animation: simpleFadeIn ease-out 3s forwards;
+    animation-delay: 1000ms;
+
+    .cta-line-lrg {
+        padding-top: 0.5rem;
+        padding-bottom: 0;
+        padding-inline: 0.8rem;
+        font-size: var(--fs-530);
+    }
+
+    .cta-line-sml {
+        padding-top: 0.2rem;
+        padding-bottom: 0;
+        padding-inline: 0.8rem;
+        font-size: var(--fs-300);
+
+        &:last-child {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    @include mqmax(large) {
+        bottom: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include mqmax(medium) {
+        bottom: 22vh;
+    }
+}
+
+@keyframes simpleFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
