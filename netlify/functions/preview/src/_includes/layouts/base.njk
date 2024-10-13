@@ -33,8 +33,19 @@
 		<!-- <link rel="stylesheet" href="https://unpkg.com/open-props/fonts.min.css" /> -->
 		<!-- <link rel="stylesheet" href="https://unpkg.com/open-props/sizes.min.css" /> -->
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preload" href="{{ '/fonts/EBGaramond-Regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/EBGaramond-Italic.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/EBGaramond-SemiBold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/EBGaramond-Bold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/EBGaramond-Medium.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/EBGaramond-Regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/Lato-Regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/Lato-Light.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/Lato-Black.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/Lato-Italic.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/Lato-Bold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{ '/fonts/Lato-Hairline.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+
 		<!-- <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet"> -->
 
 		{% if ngpage.pageSettings.slider or slider %}
@@ -173,6 +184,8 @@
 						belowFold.scrollIntoView({behavior: "smooth", block: "start"});
 					});
 				}
+				// Push homepage masthead tagline+credit down if CTA absent
+				// const ctaElem = document.querySelector(".cta")
 			</script>
 
 			{% if ngpage.pageSettings.scrollToTop or scrollToTop %}

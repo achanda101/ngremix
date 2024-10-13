@@ -112,7 +112,7 @@ footer #go-to-top {
     }
 
     @include mqmax(medium) {
-        bottom: calc(var(--gap-from-bottom) - 2vh);
+        // bottom: calc(var(--gap-from-bottom) - 2vh);
 
         img {
             width: 18px;
