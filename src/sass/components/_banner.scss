@@ -39,14 +39,15 @@
     color: hsl(var(--clr-neutral-300));
 
     right: 2px;
-    bottom: 24vh;
+    // bottom: 22vh;
+    bottom: calc(var(--gap-from-bottom) * 4.5);
 
-    @include mq(medium) {
-        bottom: 18vh;
+    @include mq(small) {
+        bottom: calc(var(--gap-from-bottom) * 3);
     }
 
     @include mq(large) {
-        bottom: 2vh;
+        bottom: var(--gap-from-bottom);
         right: 15px;
         color: hsl(var(--clr-neutral-300));
         font-weight: var(--fw-light);
@@ -120,6 +121,8 @@
 }
 
 .banner-tagline--text {
+    max-width: 90vw;
+
     @include mq(large) {
         max-width: 42vw;
     }
