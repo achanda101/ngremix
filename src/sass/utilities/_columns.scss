@@ -157,7 +157,15 @@
             }
         }
     }
+
+    // case: multiple buttons in a row
+    // make width of all buttons equal
+    .button {
+        // TODO: need to take larger value of fit-content and 75% of width
+        width: 75% !important;
+    }
 }
+
 
 .even-columns {
     @extend .grid;
