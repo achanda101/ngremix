@@ -184,8 +184,56 @@
 						belowFold.scrollIntoView({behavior: "smooth", block: "start"});
 					});
 				}
+
+				// Utility Functions to adjust CTA red band width for different mobile user agents
+				const ua = navigator
+					.userAgent
+					.toLowerCase()
+				const isAndroid = ua.includes('android')
+				const isIPhone = (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))
+
 				// Push homepage masthead tagline+credit down if CTA absent
-				// const ctaElem = document.querySelector(".cta")
+				const redBandCTA_List = document.querySelectorAll(".cta-mobile")
+				const viewportHt = window.visualViewport.height
+
+				if (redBandCTA_List.length > 1 && (isAndroid || isIPhone)) {
+					const gapFromBottom = viewportHt * 0.11
+					const gapFromBottomSml = viewportHt * 0.02
+					const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
+					const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
+					const redBandCTA_topY = redBandCTA_List[0]
+						.getBoundingClientRect()
+						.top
+					const redBandCTA_botY = redBandCTA_List[0]
+						.getBoundingClientRect()
+						.bottom
+					const redBandCTA_botPadding = redBandCTA_botY - viewportHt
+
+					redBandCTA_List.forEach((elem) => {
+						elem.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
+					})
+
+					bannerTaglineElemList.forEach((elem) => {
+						elem.style.paddingBottom = gapFromBottomSml.toString() + "px"
+					})
+
+					bannerImgCreditElemList.forEach((elem) => {
+						elem.style.bottom = (redBandCTA_botY - redBandCTA_topY + gapFromBottom).toString() + "px"
+					})
+				}
+
+				function isSearchBarAtBottom() {
+					const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+					if (!isIOS) 
+						return false
+
+					const vh = window.innerHeight
+					const visualVh = window.visualViewport.height
+
+					alert("vh=" + vh + " | visualVh = " + visualVh)
+
+					return visualVh < vh
+				}
 			</script>
 
 			{% if ngpage.pageSettings.scrollToTop or scrollToTop %}

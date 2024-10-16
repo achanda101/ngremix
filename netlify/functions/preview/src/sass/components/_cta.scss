@@ -1,6 +1,6 @@
 @use '../abstracts/' as *;
 
-.cta {
+.cta-desk {
     cursor: pointer;
     height: 15vh;
     width: fit-content;
@@ -51,48 +51,22 @@
         }
     }
 
+    // For tablet and below
     @include mqmax(large) {
+        display: block;
         bottom: 20vh;
         left: 50%;
         transform: translateX(-50%);
     }
 
+    // For ipad raise it higher
     @include mqmax(medium) {
         bottom: 22vh;
     }
 
-    // On mobile,
-    // 1. hide CTA image
-    // 2. Display CTA text on a red band at the bottom of the masthead
+    // For mobile only
     @include mqmax(small) {
-        img {
-            display: none;
-        }
-
-        border-radius: 0;
-        border: none;
-        background-color: hsl(var(--clr-secondary-525));
-        // height: fit-content;
-        height: 17.5vh;
-        width: 100vw;
-        bottom: 0;
-        padding-bottom: 8dvh;
-        // Remove fade-in animation
-        opacity: 1;
-        animation: none;
-
-        .cta-line-lrg {
-            padding-top: 0.8rem;
-            font-size: var(--fs-575);
-            font-weight: var(--fw-serif-medium);
-        }
-
-        .cta-line-sml {
-            padding-top: 0;
-            font-size: var(--fs-375);
-            font-weight: var(--fw-serif-medium);
-        }
-
+        display: none;
     }
 }
 
@@ -103,5 +77,51 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+// On mobile,
+// 1. hide CTA image
+// 2. Display CTA text on a red band at the bottom of the masthead
+// 3. Banner tagline+credit will always sit above the red band CTA
+.cta-mobile {
+    display: none;
+
+    @include mqmax(small) {
+        display: block;
+        color: hsl(var(--clr-neutral-100));
+        text-align: center;
+
+        img {
+            display: none;
+        }
+
+        border-radius: 0;
+        border: none;
+        background-color: hsl(var(--clr-secondary-525));
+        height: fit-content;
+        // height: 17.5vh;
+        width: 100vw;
+        bottom: 0;
+        // Remove fade-in animation
+        opacity: 1;
+        animation: none;
+
+        .cta-line-lrg {
+            padding-top: 0.2rem;
+            font-size: var(--fs-575);
+            font-weight: var(--fw-serif-medium);
+        }
+
+        .cta-line-sml {
+            padding-top: 0;
+            font-size: var(--fs-375);
+            font-weight: var(--fw-serif-medium);
+
+            &:last-child {
+                padding-bottom: 0.5rem;
+            }
+        }
+
     }
 }

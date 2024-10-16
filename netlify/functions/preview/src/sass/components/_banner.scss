@@ -55,9 +55,9 @@
 
     // On mobile, >>>>>>>> COMMENT OUT WHEN CTA ABSENT
     // 1. raise the banner image credit above the CTA red band
-    @include mqmax(small) {
-        bottom: 20vh;
-    }
+    // @include mqmax(small) {
+    //     bottom: 20vh;
+    // }
 
     opacity: 0;
     // Fade-in the credit after the banner image loads
@@ -126,9 +126,9 @@
 
     // On mobile, >>>>>>>> COMMENT OUT WHEN CTA ABSENT
     // 1. raise the tagline + credit above the CTA red band
-    @include mqmax(small) {
-        bottom: 10vh;
-    }
+    // @include mqmax(small) {
+    //     bottom: 10vh;
+    // }
 }
 
 .banner-tagline--text {
@@ -236,6 +236,25 @@
     font-size: var(--fs-550);
     line-height: 0.75;
 }
+
+.banner-tagline-cta-combo {
+
+
+    @include mqmax(small) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+
+        .banner-tagline {
+            position: static;
+        }
+    }
+}
+
 
 // Animated Scroll Arrow (red circle with white arrow inside)
 // https://codepen.io/achanda007/pen/wvbrgKY
