@@ -53,7 +53,7 @@
 
     // For tablet and below
     @include mqmax(large) {
-        display: block;
+        display: flex;
         bottom: 20vh;
         left: 50%;
         transform: translateX(-50%);
