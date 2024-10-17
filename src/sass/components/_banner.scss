@@ -237,23 +237,23 @@
     line-height: 0.75;
 }
 
-.banner-tagline-cta-combo {
+// .banner-tagline-cta-combo {
 
 
-    @include mqmax(small) {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        justify-content: center;
-        align-items: center;
+//     @include mqmax(small) {
+//         display: flex;
+//         flex-direction: column;
+//         position: absolute;
+//         left: 0;
+//         bottom: 0;
+//         justify-content: center;
+//         align-items: center;
 
-        .banner-tagline {
-            position: static;
-        }
-    }
-}
+//         .banner-tagline {
+//             position: static;
+//         }
+//     }
+// }
 
 
 // Animated Scroll Arrow (red circle with white arrow inside)

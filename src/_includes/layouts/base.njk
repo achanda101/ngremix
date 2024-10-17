@@ -192,33 +192,59 @@
 				const isAndroid = ua.includes('android')
 				const isIPhone = (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))
 
+				const redBandCTA = document.querySelector(".cta-mobile")
+
+				if (!Object.is(redBandCTA, null)) {
+					const vanillaSlideList = document.querySelectorAll(".vanilla-slide")
+					const bannerContainer = document.querySelector("#banner-container")
+
+					if (isAndroid) {
+						alert("android")
+						vanillaSlideList.forEach((elem) => {
+							elem.style.height = "97vh"
+						})
+						bannerContainer.style.minHeight = "97vh"
+					}
+
+					if (isIPhone) {
+						vanillaSlideList.forEach((elem) => {
+							elem.style.height = "93vh"
+						})
+						bannerContainer.style.minHeight = "93vh"
+					}
+
+				}
+
 				// Push homepage masthead tagline+credit down if CTA absent
-				const redBandCTA_List = document.querySelectorAll(".cta-mobile")
+
 				const viewportHt = window.visualViewport.height
 
-				if (redBandCTA_List.length > 1 && (isAndroid || isIPhone)) {
-					const gapFromBottom = viewportHt * 0.11
-					const gapFromBottomSml = viewportHt * 0.02
+				if (!Object.is(redBandCTA, null) && (isAndroid || isIPhone)) {
+					const gapFromBottomSml = viewportHt * 0.02 // 2vh
 					const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
 					const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
-					const redBandCTA_topY = redBandCTA_List[0]
+					const redBandCTA_topY = redBandCTA
 						.getBoundingClientRect()
 						.top
-					const redBandCTA_botY = redBandCTA_List[0]
+					const redBandCTA_botY = redBandCTA
 						.getBoundingClientRect()
 						.bottom
 					const redBandCTA_botPadding = redBandCTA_botY - viewportHt
 
-					redBandCTA_List.forEach((elem) => {
-						elem.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
-					})
+					redBandCTA.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
 
+					const newRedBandCTA_ht = redBandCTA
+						.getBoundingClientRect()
+						.bottom - redBandCTA
+						.getBoundingClientRect()
+						.top;
 					bannerTaglineElemList.forEach((elem) => {
 						elem.style.paddingBottom = gapFromBottomSml.toString() + "px"
+						elem.style.bottom = newRedBandCTA_ht.toString() + "px"
 					})
 
 					bannerImgCreditElemList.forEach((elem) => {
-						elem.style.bottom = (redBandCTA_botY - redBandCTA_topY + gapFromBottom).toString() + "px"
+						elem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
 					})
 				}
 
