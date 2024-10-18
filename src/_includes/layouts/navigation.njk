@@ -214,6 +214,19 @@
                 {% endif %}
             </div>
         </li>
+        <li class="desk-only">
+            <div class="nav-item">
+                {% if parentMenuItem and parentMenuItem == "Subscribe" %}
+                    <span class="nav-item-name active open-modal" id="openModal-email-subscribe">
+                        <a>Subscribe</a>
+                    </span>
+                {% else %}
+                    <span class="nav-item-name open-modal" id="openModal-email-subscribe">
+                        <a>Subscribe</a>
+                    </span>
+                {% endif %}
+            </div>
+        </li>
         {# TODO: Unable to scroll the mobile menu to access more items #}
     </ul>
     <ul class="nav-list">
@@ -526,31 +539,38 @@
         </li>
     </ul>
     <div class="sticky-bottom-nav">
-        <a href="tel:+918028466312">
-            <img src="/img/phone-red.svg"
-                 class="icon med-sml"
+        <div class="outline-button">
+            <a class="open-modal redtext" id="openModal-email-subscribe-mob">Subscribe to our Newsletter</a>
+        </div>
+
+        <div class="sm-icon-row">
+            <a href="tel:+918028466312">
+                <img src="/img/phone-red.svg"
+                 class="icon mob-ht"
                  alt="Phone Icon">
-        </a>
-        <a href="mailto:info@nrityagram.org">
-            <img src="/img/email-red.svg"
-                 class="icon med-sml"
+            </a>
+            <a href="mailto:info@nrityagram.org">
+                <img src="/img/email-red.svg"
+                 class="icon mob-ht"
                  alt="Email Icon">
-        </a>
-        <a href="https://www.facebook.com/nrityagram">
-            <img src="/img/fb-red.svg"
-                 class="icon med-sml"
+            </a>
+            <a href="https://www.facebook.com/nrityagram">
+                <img src="/img/fb-red.svg"
+                 class="icon mob-ht"
                  alt="Facebook Icon">
-        </a>
-        <a href="https://www.instagram.com/nrityagram/">
-            <img src="/img/insta-red.svg"
-                 class="icon med-sml"
+            </a>
+            <a href="https://www.instagram.com/nrityagram/">
+                <img src="/img/insta-red.svg"
+                 class="icon mob-ht"
                  alt="Instagram Icon">
-        </a>
-        <a href="https://www.youtube.com/@Nrityagram">
-            <img src="/img/youtube-red.svg"
-                 class="icon med-sml"
+            </a>
+            <a href="https://www.youtube.com/@Nrityagram">
+                <img src="/img/youtube-red.svg"
+                 class="icon mob-ht"
                  alt="Youtube Icon">
-        </a>
+            </a>
+        </div>
+
     </div>
 
 </div>

@@ -28,16 +28,36 @@
     visibility: visible;
     scale: 1;
     position: absolute;
-    top: calc(var(--logo-height) + 1.5rem);
+    top: calc(var(--logo-height-mob) + 2vh);
     left: 3vw;
-    width: 88vw;
+    width: 90vw;
+    height: 120vh;
 
     .sticky-bottom-nav {
-        display: flex;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        gap: 22px;
-        margin-top: 25px;
+        align-items: center;
+        margin-top: 2vh;
+        gap: 1vh;
+
+        .outline-button {
+            border: 1.5px solid hsl(var(--clr-secondary-550));
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-family: var(--ff-sans);
+            font-size: var(--fs-400);
+        }
+
+        .sm-icon-row {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 22px;
+            font-size: var(--fs-525);
+        }
+
     }
 }
 
@@ -52,7 +72,7 @@
     gap: 1em;
 
     @include mqmax(medium) {
-        gap: 0.25em;
+        gap: 0;
     }
 
     li {
@@ -62,6 +82,10 @@
     li .nav-item {
         cursor: default;
         padding: 1px 0;
+
+        @include mqmax(medium) {
+            padding: 0.3vh 0;
+        }
     }
 
     li .nav-item-name,
@@ -214,6 +238,7 @@
         font-size: var(--_nav-item-fontsize-sml) !important;
     }
 }
+
 
 .nav-sublist {
     z-index: 15;

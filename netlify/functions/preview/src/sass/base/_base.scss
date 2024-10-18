@@ -174,7 +174,7 @@ s {
 	}
 }
 
-.hide-on-mob {
+.desk-only {
 	@include mqmax(medium) {
 		display: none;
 	}

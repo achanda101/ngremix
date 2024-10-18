@@ -81,6 +81,10 @@ footer .rowstack {
     text-align: center;
     padding: 0 1.2em;
 
+    &.wide {
+        gap: 0.5em;
+    }
+
     @include mq(small) {
         padding: 0 0.6em;
     }
