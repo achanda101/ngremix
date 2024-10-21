@@ -27,6 +27,14 @@
         object-fit: cover;
     }
 
+    &.shrink-desk {
+        @include mq(medium) {
+            width: 75%;
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+    }
+
     &.shrink-mob {
         @include mqmax(small) {
             width: 75%;
