@@ -273,14 +273,24 @@
 
 				}
 
-				// Push homepage masthead tagline+credit down if CTA absent
-
 				const viewportHt = window.visualViewport.height
+				const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
+				const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
 
+				// if CTA is absent and user agent is iPhone, set bottom padding of banner tagline to 12vh
+				if (Object.is(redBandCTA, null) && isIPhone) {
+					bannerTaglineElemList.forEach((elem) => {
+						elem.style.paddingBottom = "12vh"
+					})
+					bannerImgCreditElemList.forEach((elem) => {
+						elem.style.bottom = "12vh"
+					})
+				}
+
+				// if CTA is present and user agent is a mobile browser
 				if (!Object.is(redBandCTA, null) && (isAndroid || isIPhone)) {
 					const gapFromBottomSml = viewportHt * 0.02 // 2vh
-					const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
-					const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
+
 					const redBandCTA_topY = redBandCTA
 						.getBoundingClientRect()
 						.top
