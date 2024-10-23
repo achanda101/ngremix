@@ -92,9 +92,11 @@
 
 	// the negative margin pushes the banner
 	// up and behind the primary header and is flush against the top edge
-	margin-top: calc(var(--_primary-header-ht) * (-1));
+	// had to change factor to 1.06 to cover the small gap that appeared at the top
+	// after logo was made inline SVG
+	margin-top: calc(var(--_primary-header-ht) * (-1.06));
 
 	width: 100vw;
-	min-height: 100vh;
+	min-height: 101vh;
 	background-color: #000;
 }

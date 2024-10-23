@@ -1,0 +1,88 @@
+---
+layout: layouts/page.njk
+eleventyNavigation:
+  key: page
+  order: 1
+tags: page
+date: Last Modified
+title: "Informance"
+description: "Fun and interesting activities to do in Nrityagram - guided tours and lecture-demonstrations."
+OGImage: "https://res.cloudinary.com/nrityagram/image/upload/v1718214045/informance-masthead-desk_hqqkzx.png"
+---
+<div id="banner-container">
+  <div class="banner-image">
+    {% pictures {
+      "desk" : "https://res.cloudinary.com/nrityagram/image/upload/v1718214045/informance-masthead-desk_hqqkzx.png",
+      "tab" : "https://res.cloudinary.com/nrityagram/image/upload/v1718214032/informance-masthead-tablet_hdywaz.png",
+      "mob" : "https://res.cloudinary.com/nrityagram/image/upload/v1718214030/informance-masthead-mobile_abb4he.png"
+    },
+    "Iformance 2024", {
+      "mob": ["425"],
+      "tab": ["768"],
+      "desk": ["1600"]
+    }, {
+      "desk": "65em",
+      "tab": "50em",
+      "mob": "35em"
+    },
+    "eager",
+    "high" %}
+  </div>
+  <div class="banner-image-credit"
+    data-image-credit-desk="Courtesy CFAA" 
+    data-image-credit-tab="Courtesy CFAA" 
+    data-image-credit-mob="Courtesy CFAA"
+    ></div>
+  <div class="banner-title">
+        Informance
+  </div>
+</div>
+<div class="container">
+  <div class="wrapper flow">
+    <h1 class="center">
+      Dance Informance at Nrityagram
+    </h1>
+    <h4 class="center">INFORMAL | INFORMATIVE | PERFORMANCE</h4>
+    <br />
+    <p class="center">
+        Come by yourself or in a group<br />
+        Take a Guided Tour of our beautiful campus<br />
+        Watch a Lecture-Demonstration by our renowned performers<br />
+        Discover the richness of our dance heritage<br />
+        Have a Nrityagram Experience! 
+    </p>
+    <br />
+    <p class="center">
+      19 OCT 2024<br />
+      11AM - 1PM<br />
+      ₹1500 per person + ₹20 Convenience Fee<br />
+    </p>
+    <div class="center">
+      <!-- data-color="a5a5a5" -->
+      <div class="razorpay-embed-btn"
+                 data-url="https://pages.razorpay.com/pl_OnnKaVGHl4bk7C/view"
+                 data-text="Book for Informance on 19 OCT"
+                 data-color="#C91D25"
+                 data-size="large">
+        <script>
+          (function () {
+            var d = document;
+            var x = !d.getElementById('razorpay-embed-btn-js')
+            if (x) {
+              var s = d.createElement('script');
+              s.defer = !0;
+              s.id = 'razorpay-embed-btn-js';
+              s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+              d
+                .body
+                .appendChild(s);
+            } else {
+              var rzp = window['__rzp__'];
+              rzp && rzp.init && rzp.init()
+            }
+          })();
+        </script>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@ dialog {
     padding-bottom: 1em;
     position: fixed;
     outline: none;
-    
+
     // vertically align in middle of screen
     top: 50%;
     transform: translateY(-50%);
@@ -25,9 +25,11 @@ dialog {
         background-color: hsl(var(--clr-secondary-550));
         min-height: 20px;
         padding: 0.2em 1em;
+
         @include mqmax(small) {
             padding: 0.5em 0.75em;
         }
+
         border-radius: 12px 12px 0 0;
         // position: relative;
         display: flex;
@@ -38,6 +40,7 @@ dialog {
             color: hsl(var(--clr-neutral-200));
             text-align: left;
         }
+
         .close-button {
             // position: absolute;
             // top: -2px;
@@ -45,6 +48,7 @@ dialog {
             padding: 0;
             font-weight: bold;
             font-size: 2rem;
+
             &:hover {
                 cursor: pointer;
             }
@@ -53,9 +57,15 @@ dialog {
 
     .modal-content {
         padding: 0 2em;
+
+        @include mqmax(medium) {
+            padding: 0;
+        }
+
         h2 {
             text-align: left;
         }
+
         &.focus-none {
             *:focus {
                 outline: none;

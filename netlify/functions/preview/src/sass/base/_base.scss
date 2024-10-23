@@ -14,7 +14,7 @@ body {
 	color: var(--_body-text-color);
 
 	@include mqmax(medium) {
-		font-size: var(--fs-500);
+		font-size: var(--fs-530);
 	}
 }
 
@@ -171,6 +171,12 @@ s {
 .center-on-mob {
 	@include mqmax(medium) {
 		text-align: center;
+	}
+}
+
+.desk-only {
+	@include mqmax(medium) {
+		display: none;
 	}
 }
 

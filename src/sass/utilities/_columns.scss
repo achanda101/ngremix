@@ -19,6 +19,10 @@
     }
 }
 
+.narrow-column :where(:not(:first-child)) {
+    margin-top: var(--flow-spacer-close);
+}
+
 .wide-column {
     grid-area: widecol;
 
@@ -153,7 +157,15 @@
             }
         }
     }
+
+    // case: multiple buttons in a row
+    // make width of all buttons equal
+    .button {
+        // TODO: need to take larger value of fit-content and 75% of width
+        width: 75%;
+    }
 }
+
 
 .even-columns {
     @extend .grid;
@@ -240,6 +252,32 @@
             grid-template-columns: 24% 67% 6%;
             grid-template-areas:
                 "narrowcol widecol spacercol";
+        }
+
+        @include mq(medium) {
+            .image-plus {
+                width: 85% !important;
+                margin-left: auto !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        @include mq(large) {
+            .image-plus {
+                width: 95% !important;
+                margin-left: auto !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        &.reverse-mob {
+
+            // mobile
+            @include mqmax(medium) {
+                grid-template-areas:
+                    "widecol"
+                    "narrowcol";
+            }
         }
     }
 

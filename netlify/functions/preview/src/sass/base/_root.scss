@@ -7,6 +7,7 @@
 	// --fw-serif-light: #{$fw-serif-light}; 
 	--fw-serif-normal: #{$fw-serif-normal};
 	--fw-serif-medium: #{$fw-serif-medium};
+	--fw-serif-semibold: #{$fw-serif-semibold};
 	--fw-sans-normal: #{$fw-sans-normal};
 	--fw-sans-light: #{$fw-sans-light};
 	--fw-bold: #{$fw-bold};
@@ -21,6 +22,7 @@
 	--flow-spacer-nontitletext: #{$flow-spacer-nontitletext};
 	--flow-spacer-extra: #{$flow-spacer-extra};
 	--flow-spacer-h1: #{$flow-spacer-h1};
+	--flow-spacer-h1-top-pad: #{$flow-spacer-h1-top-pad};
 	--flow-spacer-large: #{$flow-spacer-large};
 	--column-gap: #{$column-gap};
 	--wide-column-gap: #{$wide-column-gap};
@@ -40,8 +42,9 @@
 
 	--icon-height: #{$icon-height};
 	--icon-height-sml: #{$icon-height-sml};
-	--icon-height-med-sml: #{$icon-height-med-sml};
+	--icon-height-med: #{$icon-height-med};
 	--icon-height-vsml: #{$icon-height-vsml};
+	--icon-height-mob: #{$icon-height-mob};
 
 	--primary-header-topbot-padding: #{$primary-header-topbot-padding};
 
