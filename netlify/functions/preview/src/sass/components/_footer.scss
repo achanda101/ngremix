@@ -50,7 +50,7 @@ footer .tagline {
     letter-spacing: var(--ls-normal);
     padding: 8px 0;
 
-    @include mq(medium) {
+    @include mq(medium2) {
         font-size: var(--fs-400);
         padding: 10px 0;
     }
