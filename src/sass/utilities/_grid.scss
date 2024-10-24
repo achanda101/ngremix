@@ -5,6 +5,10 @@
 	// var(--custom-prop, var(--default-value))
 	gap: var(--column-gap, var(--spacer));
 
+	@include mqmax(small) {
+		gap: var(--narrow-column-gap);
+	}
+
 	// For unlimited columns --
 	// screen size 800px - 1280px: max columns = 2
 	// above 1280px: unlimited columns (use case is 4)
@@ -26,4 +30,3 @@
 //   align-items: $align;
 //   justify-content: $justify;
 // }
-
