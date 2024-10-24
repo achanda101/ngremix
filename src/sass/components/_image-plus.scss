@@ -224,7 +224,7 @@
                     font-size: var(--fs-550);
                     background-image: none;
                     padding-bottom: 8px;
-                    width: 50%;
+                    width: 55%;
 
                     @include mqmax(small) {
                         font-size: var(--fs-650);
@@ -244,15 +244,8 @@
 
         &.on-hover-fade {
             img {
-                filter: blur(1.5px);
                 opacity: 0.9;
                 transition: opacity 750ms ease-in-out;
-            }
-
-            @include mqmax(small) {
-                img {
-                    filter: none;
-                }
             }
         }
 
