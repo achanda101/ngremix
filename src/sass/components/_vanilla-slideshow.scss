@@ -52,16 +52,16 @@
 
     // display: none;
     img {
-        // width: 28px;
-        // height: 28px;
-        width: 2vw;
-        height: 2vw;
+        width: 28px;
+        height: 28px;
+        // width: 2vw;
+        // height: 2vw;
     }
 
     @include mqmax(medium) {
         img {
-            width: 8vw;
-            height: 8vw;
+            width: 36px;
+            height: 36px;
         }
     }
 }
@@ -80,14 +80,14 @@
 
     // display: none;
     img {
-        width: 2vw;
-        height: 2vw;
+        width: 28px;
+        height: 28px;
     }
 
     @include mqmax(medium) {
         img {
-            width: 8vw;
-            height: 8vw;
+            width: 36px;
+            height: 36px;
         }
     }
 }
