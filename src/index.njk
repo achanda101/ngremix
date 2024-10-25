@@ -1660,7 +1660,7 @@ OGImage: 'https://res.cloudinary.com/nrityagram/image/upload/v1701794529/ng_logo
     {% include 'youtube.njk' %}
 
     <!-- Start of SM Cards -->
-
+    <!--
     <div class="even-columns-unlimited">
       <div class="image-plus card size-md plain-bg landscape on-hover-fade" onclick="window.open('https://www.youtube.com/user/Nrityagram','_blank');">
         {% image "https://res.cloudinary.com/nrityagram/image/upload/v1729764105/SocialMediaCards/ahuti-relived-slider-image25-26-desk_esl4ng_pm6ly2.png",
@@ -1681,14 +1681,13 @@ OGImage: 'https://res.cloudinary.com/nrityagram/image/upload/v1701794529/ng_logo
         <div class="card-title">Like on Facebook</div>
       </div>
     </div>
-
+-->
     <!-- End of SM Cards -->
-
-    <!--
+    <!-- Long red Buttons
     <div class="even-columns-unlimited">
       <div class="button red-plastic center"
            data-stacking-order="1"
-           onclick="location.href='https://www.youtube.com/user/Nrityagram';">
+           onclick="window.open('https://www.youtube.com/user/Nrityagram','_blank');">
         <div class="glare"></div>
         Subscribe on Youtube
       </div>
@@ -1708,15 +1707,38 @@ OGImage: 'https://res.cloudinary.com/nrityagram/image/upload/v1701794529/ng_logo
       </div>
     </div>
 -->
-  </div>
-</div>
 
-<div class="container">
-  <div class="wrapper flow">
-    <h1 class="medium-wt">Visit Nrityagram</h1>
-    <div class="even-columns no-gap hide-right-mob">
-      <div class="left-column">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1192.5589560826568!2d77.45979436871723!3d13.163328428545444!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1643316702354!5m2!1sen!2sin"
+    <div class="center">
+      <div class="button red-plastic inline-button length-fit-content"
+           data-stacking-order="1"
+           onclick="window.open('https://www.youtube.com/user/Nrityagram','_blank');">
+        <div class="glare"></div>
+        <img src="/img/youtube-white.svg" class="icon sml" alt="Youtube Icon">
+      </div>
+
+      <div class="button red-plastic inline-button length-fit-content"
+           data-stacking-order="2"
+           onclick="window.open('https://www.instagram.com/nrityagram/','_blank');">
+        <div class="glare"></div>
+        <img src="/img/insta-white.svg" class="icon sml" alt="Instagram Icon">
+      </div>
+
+      <div class="button red-plastic inline-button length-fit-content"
+           data-stacking-order="3"
+           onclick="window.open('https://www.facebook.com/nrityagram/','_blank');">
+        <div class="glare"></div>
+        <img src="/img/fb-white.svg" class="icon sml" alt="Facebook Icon">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="wrapper flow">
+      <h1 class="medium-wt">Visit Nrityagram</h1>
+      <div class="even-columns no-gap hide-right-mob">
+        <div class="left-column">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1192.5589560826568!2d77.45979436871723!3d13.163328428545444!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1643316702354!5m2!1sen!2sin"
                 id="ng-map"
                 width="100%"
                 height="100%"
@@ -1725,46 +1747,46 @@ OGImage: 'https://res.cloudinary.com/nrityagram/image/upload/v1701794529/ng_logo
                 style="border:0;border-radius: 12px 0 0 12px; overflow: hidden; width: 100%; height: 100%; aspect-ratio: 4/3;"
                 allowfullscreen=""
                 loading="lazy"></iframe>
-      </div>
-      <div class="right-column">
-        <div class="image-plus sharp-left">
-          {% image "https://res.cloudinary.com/nrityagram/image/upload/v1728724534/three-women_fawijr.jpg", "Statue of three women inside Nrityagram", ["auto", "768", "560"] %}
+        </div>
+        <div class="right-column">
+          <div class="image-plus sharp-left">
+            {% image "https://res.cloudinary.com/nrityagram/image/upload/v1728724534/three-women_fawijr.jpg", "Statue of three women inside Nrityagram", ["auto", "768", "560"] %}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="button red-plastic center"
+      <div class="button red-plastic center"
          onclick="location.href='/findyourway';">
-      <div class="glare"></div>
+        <div class="glare"></div>
       More ways to reach Nrityagram
     </div>
+    </div>
   </div>
-</div>
 
-<script src="{{ '/utils/vanilla-slideshow.js' | url }}"></script>
-<script>
-  vanillaSlideshow.init({
-    // auto slideshow, options: true or false
-    slideshow: true,
-    // slideshow delay
-    delay: 3500,
-    // display arrows, options: true or false
-    arrows: true,
-    // display indicators, options: true or false
-    indicators: false,
-    // start slideshow randomly, options: true or false
-    random: false,
-    // animation speed
-    animationSpeed: '1.75s'
-  });
-</script>
+  <script src="{{ '/utils/vanilla-slideshow.js' | url }}"></script>
+  <script>
+    vanillaSlideshow.init({
+      // auto slideshow, options: true or false
+      slideshow: true,
+      // slideshow delay
+      delay: 3500,
+      // display arrows, options: true or false
+      arrows: true,
+      // display indicators, options: true or false
+      indicators: false,
+      // start slideshow randomly, options: true or false
+      random: false,
+      // animation speed
+      animationSpeed: '1.75s'
+    });
+  </script>
 
-<script type="text/javascript">
-  const gmap = document.querySelector('#ng-map')
+  <script type="text/javascript">
+    const gmap = document.querySelector('#ng-map')
 
-  // For mobile screens make the map full-bleed
-  if (window.matchMedia("(max-width: 50em)").matches) {
-    gmap.style.marginLeft = "-9.75vw"
-    gmap.style.width = "100vw"
-    gmap.style.borderRadius = "0"
-  }
-</script>
+    // For mobile screens make the map full-bleed
+    if (window.matchMedia("(max-width: 50em)").matches) {
+      gmap.style.marginLeft = "-9.75vw"
+      gmap.style.width = "100vw"
+      gmap.style.borderRadius = "0"
+    }
+  </script>
