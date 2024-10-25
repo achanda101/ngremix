@@ -19,6 +19,10 @@
     border: 1px solid #ccc;
     position: relative;
 
+    &.slim {
+        padding: 3px 1.7em;
+    }
+
     /* Label */
     font-family: var(--ff-sans);
     font-size: var(--fs-300);
