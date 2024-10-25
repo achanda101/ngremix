@@ -1732,13 +1732,14 @@ OGImage: 'https://res.cloudinary.com/nrityagram/image/upload/v1701794529/ng_logo
     </div>
 
   </div>
+</div>
 
-  <div class="container">
-    <div class="wrapper flow">
-      <h1 class="medium-wt">Visit Nrityagram</h1>
-      <div class="even-columns no-gap hide-right-mob">
-        <div class="left-column">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1192.5589560826568!2d77.45979436871723!3d13.163328428545444!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1643316702354!5m2!1sen!2sin"
+<div class="container">
+  <div class="wrapper flow">
+    <h1 class="medium-wt">Visit Nrityagram</h1>
+    <div class="even-columns no-gap hide-right-mob">
+      <div class="left-column">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1192.5589560826568!2d77.45979436871723!3d13.163328428545444!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1643316702354!5m2!1sen!2sin"
                 id="ng-map"
                 width="100%"
                 height="100%"
@@ -1747,46 +1748,46 @@ OGImage: 'https://res.cloudinary.com/nrityagram/image/upload/v1701794529/ng_logo
                 style="border:0;border-radius: 12px 0 0 12px; overflow: hidden; width: 100%; height: 100%; aspect-ratio: 4/3;"
                 allowfullscreen=""
                 loading="lazy"></iframe>
-        </div>
-        <div class="right-column">
-          <div class="image-plus sharp-left">
-            {% image "https://res.cloudinary.com/nrityagram/image/upload/v1728724534/three-women_fawijr.jpg", "Statue of three women inside Nrityagram", ["auto", "768", "560"] %}
-          </div>
+      </div>
+      <div class="right-column">
+        <div class="image-plus sharp-left">
+          {% image "https://res.cloudinary.com/nrityagram/image/upload/v1728724534/three-women_fawijr.jpg", "Statue of three women inside Nrityagram", ["auto", "768", "560"] %}
         </div>
       </div>
-      <div class="button red-plastic center"
+    </div>
+    <div class="button red-plastic center"
          onclick="location.href='/findyourway';">
-        <div class="glare"></div>
+      <div class="glare"></div>
       More ways to reach Nrityagram
     </div>
-    </div>
   </div>
+</div>
 
-  <script src="{{ '/utils/vanilla-slideshow.js' | url }}"></script>
-  <script>
-    vanillaSlideshow.init({
-      // auto slideshow, options: true or false
-      slideshow: true,
-      // slideshow delay
-      delay: 3500,
-      // display arrows, options: true or false
-      arrows: true,
-      // display indicators, options: true or false
-      indicators: false,
-      // start slideshow randomly, options: true or false
-      random: false,
-      // animation speed
-      animationSpeed: '1.75s'
-    });
-  </script>
+<script src="{{ '/utils/vanilla-slideshow.js' | url }}"></script>
+<script>
+  vanillaSlideshow.init({
+    // auto slideshow, options: true or false
+    slideshow: true,
+    // slideshow delay
+    delay: 3500,
+    // display arrows, options: true or false
+    arrows: true,
+    // display indicators, options: true or false
+    indicators: false,
+    // start slideshow randomly, options: true or false
+    random: false,
+    // animation speed
+    animationSpeed: '1.75s'
+  });
+</script>
 
-  <script type="text/javascript">
-    const gmap = document.querySelector('#ng-map')
+<script type="text/javascript">
+  const gmap = document.querySelector('#ng-map')
 
-    // For mobile screens make the map full-bleed
-    if (window.matchMedia("(max-width: 50em)").matches) {
-      gmap.style.marginLeft = "-9.75vw"
-      gmap.style.width = "100vw"
-      gmap.style.borderRadius = "0"
-    }
-  </script>
+  // For mobile screens make the map full-bleed
+  if (window.matchMedia("(max-width: 50em)").matches) {
+    gmap.style.marginLeft = "-9.75vw"
+    gmap.style.width = "100vw"
+    gmap.style.borderRadius = "0"
+  }
+</script>
