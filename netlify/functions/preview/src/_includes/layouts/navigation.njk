@@ -217,12 +217,12 @@
         <li class="desk-only">
             <div class="nav-item">
                 {% if parentMenuItem and parentMenuItem == "Subscribe" %}
-                    <span class="nav-item-name active open-modal" id="openModal-email-subscribe">
-                        <a>Subscribe</a>
+                    <span class="nav-item-name active">
+                        <a href="/subscribe">Subscribe</a>
                     </span>
                 {% else %}
-                    <span class="nav-item-name open-modal" id="openModal-email-subscribe">
-                        <a>Subscribe</a>
+                    <span class="nav-item-name">
+                        <a href="/subscribe">Subscribe</a>
                     </span>
                 {% endif %}
             </div>
@@ -453,37 +453,6 @@
                             <a href="/building-a-dance-community">Building a Dance Community</a>
                         {% endif %}
                     </li>
-                    <!-- <li data-dropdown-lvl2 >
-                        <div class="nav-item-lvl2" data-dropdown-link>
-                            <div class="nav-item-name-lvl2">
-                                {% if '/community' in page.url %}
-                                    <a href="/community" class="sublist-item-active">Nrityagram Community</a>
-                                {% else %}
-                                    <a href="/community">Nrityagram Community</a>
-                                {% endif %}
-                            </div>
-                            <ul class="nav-sublist-lvl2">
-                                <li>
-                                    <a href="/community/#villageoutreach">Village Outreach</a>
-                                </li>
-                                <li>
-                                    <a href="/community/#popularisingarts">Popularising the Arts</a>
-                                </li>
-                                <li>
-                                    <a href="/community/#supportingartists">Supporting Artistes</a>
-                                </li>
-                                <li>
-                                    <a href="/community/#danceaware">Dance Awareness</a>
-                                </li>
-                                <li>
-                                    <a href="/community/#quietspace">Quiet Space</a>
-                                </li>
-                                <li>
-                                    <a href="/community/#dancecommons">Dance Commons</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
         </li>
@@ -540,7 +509,7 @@
     </ul>
     <div class="sticky-bottom-nav">
         <div class="outline-button">
-            <a class="open-modal redtext" id="openModal-email-subscribe-mob">Subscribe to our Newsletter</a>
+            <a href="/subscribe" class="redtext no-decoration">Subscribe to our Newsletter</a>
         </div>
 
         <div class="sm-icon-row">

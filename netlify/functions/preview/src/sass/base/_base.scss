@@ -129,6 +129,10 @@ a {
 		text-decoration-color: inherit;
 		text-underline-offset: 0.2em;
 	}
+
+	&.no-decoration {
+		text-decoration: none;
+	}
 }
 
 .underline {

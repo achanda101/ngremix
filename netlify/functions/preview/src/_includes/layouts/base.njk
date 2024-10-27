@@ -108,7 +108,7 @@
 						</a>
 							</span>
 						</div>
-						<a class="open-modal" id="openModal-email-subscribe-footer">
+						<a href="/subscribe">
 							<img src="/img/newsletter-white.svg" class="icon sml" alt="newsletter icon">
 							<b>SUBSCRIBE</b> to our Newsletter
 						</a>
@@ -159,7 +159,7 @@
 							</a>
 						</div>
 						<div class="hovertext" data-hovertext="Subscribe to our Newsletter">
-							<a class="open-modal" id="openModal-email-subscribe-footer2">
+							<a href="/subscribe">
 								<img src="/img/newsletter-white.svg" class="icon med mob" alt="Newsletter Icon">
 								<img src="/img/newsletter-grey.svg" class="icon desk" alt="Newsletter Icon">
 							</a>
@@ -182,74 +182,12 @@
 
 			</main>
 
-			<!-- set top to 50vh to bring newsletter subscribe modal down on ipads -->
-			<dialog id="email-subscribe" class="modal">
-				<!--<div class="wrapper flow flow-flushtop flow-flushbottom">-->
-				<div class="modal-header">
-					<h4>Subscribe to our Newsletter</h4>
-					<div class="close-button" id="closeModal-email-subscribe" aria-label="close">&#215;</div>
-				</div>
-				<div class="modal-body">
-					<div class="modal-content">
-						<!-- BEGIN Brevo Subscription Form -->
-
-						<iframe width="500" height="1000" src="https://ad245a8d.sibforms.com/serve/MUIFAAz8BbOF_XSvIQdqdQdhWvx_sXftDxMhyFPQwnqgcVgDO3NZmxFNQnfCOVIt9ILkywb1hTIH_MzXwwECcArJtO0BaCsFO_NxF8OUzAc-lmzxrUP19lNC49mkXzLjbZvQD2SP2RTGtuZJdVmmK51cK4H3QqXI9xn5NEw9i0dLMnzkayqKe6gLgRywcv5ucY6kwYm7MWc--kVi" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto; max-width: 100%; overflow-y: visible;"></iframe>
-
-						<!-- END Brevo Subscription Form code -->
-					</div>
-				</div>
-				<!--</div>-->
-			</dialog>
-
 			<script src="{{ '/utils/flow-special-cases.js' | url }}"></script>
 			<script src="{{ '/utils/primaryheader-observer.js' | url }}"></script>
 			<script src="{{ '/utils/navigation.js' | url }}"></script>
 			<script src="{{ '/utils/fadein-observer.js' | url }}"></script>
 			<script src="{{ '/utils/fadeinplace-observer.js' | url }}"></script>
 			<script src="{{ '/utils/zoomin-observer.js' | url }}"></script>
-
-			<script type="text/javascript">
-				const emailModal = document.querySelector('#email-subscribe');
-				const openEmailModal = document.querySelector('#openModal-email-subscribe');
-				const openEmailModalMob = document.querySelector('#openModal-email-subscribe-mob');
-				const openEmailModalFooter = document.querySelector('#openModal-email-subscribe-footer');
-				const openEmailModalFooter2 = document.querySelector('#openModal-email-subscribe-footer2');
-				const closeEmailModal = document.querySelector('#closeModal-email-subscribe');
-
-				openEmailModal.addEventListener('click', () => {
-					emailModal.showModal();
-				});
-
-				openEmailModalMob.addEventListener('click', () => {
-					emailModal.showModal();
-				});
-
-				openEmailModalFooter.addEventListener('click', () => {
-					emailModal.showModal();
-				});
-
-				openEmailModalFooter2.addEventListener('click', () => {
-					emailModal.showModal();
-				});
-
-				closeEmailModal.addEventListener('click', () => {
-					emailModal.close();
-				});
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function (event) {
-					if (event.target == emailModal) {
-						emailModal.close();
-					}
-				}
-				// When user presses ESC key, close modal
-				document.onkeydown = function (evt) {
-					if (emailModal.open && evt.keyCode == 27) {
-						// Escape key pressed
-						emailModal.close();
-					}
-				};
-			</script>
 
 			<script type="text/javascript">
 				const scrollBelowFold = document.getElementById("scroll-below-fold")
