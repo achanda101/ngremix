@@ -5,20 +5,18 @@ dialog {
     padding-bottom: 1em;
     position: fixed;
     outline: none;
+    overflow-y: hidden;
 
     // vertically align in middle of screen
     top: 50%;
     transform: translateY(-50%);
+
     // horizontally align in middle of screen
     margin: 0 auto;
-    height: fit-content;
+    // height: fit-content;
+    width: fit-content;
     border: 0;
     border-radius: 14px 14px 12px 12px;
-
-    .image-plus {
-        width: 100%;
-        margin-left: 0;
-    }
 
     .modal-header {
         color: hsl(var(--clr-neutral-200));
@@ -55,27 +53,51 @@ dialog {
         }
     }
 
-    .modal-content {
-        padding: 0 2em;
+    .modal-body {
+        height: 85vh;
+        overflow-y: auto;
+        margin: 0;
 
-        @include mqmax(medium) {
-            padding: 0;
+        .image-plus {
+            width: 100%;
+            margin-left: 0;
         }
 
-        h2 {
-            text-align: left;
-        }
+        .modal-content {
+            padding: 0 2em;
 
-        &.focus-none {
-            *:focus {
-                outline: none;
+            &:has(iframe) {
+                padding: 0;
+            }
+
+            @include mqmax(medium) {
+                padding: 0;
+            }
+
+            h2 {
+                text-align: left;
+            }
+
+            &.focus-none {
+                *:focus {
+                    outline: none;
+                }
             }
         }
     }
+
+
+
+
+}
+
+dialog:has(.image-plus) .modal-content {
+    height: 50vh;
 }
 
 dialog::backdrop {
     background: rgb(0 0 0 / 0.7);
+    overflow: hidden;
 }
 
 .open-modal {
