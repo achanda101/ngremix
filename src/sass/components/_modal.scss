@@ -56,6 +56,10 @@ dialog {
         overflow-y: auto;
         margin: 0;
 
+        &:focus {
+            outline-style: none;
+        }
+
         &:has(iframe) {
             padding: 0;
         }
