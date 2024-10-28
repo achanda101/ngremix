@@ -27,13 +27,12 @@
         .photo-credit {
             font-size: var(--fs-200);
             font-family: var(--ff-sans);
-            color: hsl(var(--clr-neutral-275));
-            text-shadow: 0 1px hsl(var(--clr-neutral-500));
+            color: hsl(var(--clr-neutral-200));
+            text-shadow: 1px 1.5px 1.5px hsl(var(--clr-neutral-700));
             writing-mode: vertical-rl;
             position: absolute;
             bottom: 30px;
             right: 1px;
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
         }
 
         .photo-caption {

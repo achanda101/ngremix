@@ -36,7 +36,8 @@
     font-size: var(--fs-200);
     font-family: var(--ff-sans);
     letter-spacing: var(--ls-wide);
-    color: hsl(var(--clr-neutral-300));
+    color: hsl(var(--clr-neutral-200));
+    text-shadow: 1px 1.5px 1.5px hsl(var(--clr-neutral-700));
 
     right: 2px;
     bottom: calc(var(--gap-from-bottom) * 4.5);

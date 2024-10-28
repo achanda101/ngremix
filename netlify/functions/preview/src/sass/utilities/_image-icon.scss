@@ -10,6 +10,10 @@ img.icon {
     cursor: pointer;
     padding: 0 2px;
 
+    &.vsml {
+        height: var(--icon-height-vsml);
+    }
+
     &.sml {
         height: var(--icon-height-sml);
     }
@@ -49,7 +53,7 @@ img.icon {
 
         // make the email + phone icons in the footer smaller for mobile
         @include mqmax(small) {
-            height: var(--icon-height-vsml);
+            height: var(--icon-height-vvsml);
         }
     }
 

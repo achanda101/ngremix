@@ -1,16 +1,27 @@
 @use '../abstracts/' as *;
 
 .button {
+    display: inline-block;
     width: fit-content;
     min-width: 12vw;
+
+    &.length-fit-content {
+        min-width: fit-content;
+    }
+
     @include mqmax(small) {
         min-width: 40vw;
     }
+
     height: 42px;
     padding: 3px 2em;
     border-radius: 10px;
     border: 1px solid #ccc;
     position: relative;
+
+    &.slim {
+        padding: 3px 1.7em;
+    }
 
     /* Label */
     font-family: var(--ff-sans);
@@ -24,6 +35,11 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    &.inline-button {
+        display: inline-flex;
+    }
+
     // mobile only
     @include mqmax(small) {
         font-weight: var(--fw-normal);

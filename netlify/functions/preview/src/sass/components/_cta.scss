@@ -33,6 +33,10 @@
     animation: simpleFadeIn ease-out 3s forwards;
     animation-delay: 1000ms;
 
+    .cta-textbox {
+        min-width: 15vw;
+    }
+
     .cta-line-lrg {
         padding-top: 0.5rem;
         padding-bottom: 0;
