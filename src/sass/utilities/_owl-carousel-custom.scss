@@ -2,11 +2,11 @@
 
 .owl-carousel.ultra-wide {
     // built-in flow (top and bottom)
-    padding-block: var(--flow-spacer, var(--spacer));
+    padding-block: var(--flow-spacer-top, var(--spacer));
 }
 
 .owl-carousel .item {
-    position: relative; 
+    position: relative;
 }
 
 .owl-theme .owl-nav {
@@ -56,13 +56,16 @@ button.owl-dot.active span {
 }
 
 .owl-carousel.ultra-wide {
-    button.owl-prev, 
+
+    button.owl-prev,
     button.owl-next {
         bottom: 45%;
     }
+
     .owl-dots {
         margin-top: 0 !important;
     }
+
     button.owl-dot {
         margin-left: -2px;
         margin-right: -2px;
