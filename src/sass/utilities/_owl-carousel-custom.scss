@@ -2,7 +2,12 @@
 
 .owl-carousel.ultra-wide {
     // built-in flow (top and bottom)
-    padding-block: var(--flow-spacer-top, var(--spacer));
+    padding-top: var(--flow-spacer-top, var(--spacer));
+    padding-bottom: var(--flow-spacer, var(--spacer));
+
+    @include mqmax(small) {
+        padding-bottom: 0;
+    }
 }
 
 .owl-carousel .item {
