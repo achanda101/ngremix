@@ -198,6 +198,14 @@
 					});
 				}
 
+				function isVisible(elem) {
+					return (window.getComputedStyle(elem).display !== "none")
+				}
+
+				const viewportHt = window.visualViewport.height
+				const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
+				const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
+
 				// Utility Functions to adjust CTA red band width for different mobile user agents
 				const ua = navigator
 					.userAgent
@@ -205,9 +213,14 @@
 				const isAndroid = ua.includes('android')
 				const isIPhone = (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))
 
-				const redBandCTA = document.querySelector(".cta-mobile")
+				const redBandCTAList = document.querySelectorAll(".cta-mobile")
+				const isCTAMobileVisible = (redBandCTAList.length > 0) && isVisible(redBandCTAList.item(0))
 
-				if (!Object.is(redBandCTA, null)) {
+				// If .cta-mobile selectors are visible
+				if (isCTAMobileVisible) {
+					const redBandCTAFirstItem = redBandCTAList.item(0)
+					const redBandCTAFirstItemStyle = window.getComputedStyle(redBandCTAFirstItem)
+
 					const vanillaSlideList = document.querySelectorAll(".vanilla-slide")
 					const bannerContainer = document.querySelector("#banner-container")
 
@@ -224,51 +237,44 @@
 							elem.style.height = "95.2vh"
 						})
 						bannerContainer.style.minHeight = "95.2vh"
+
+						// if CTA is absent and user agent is iPhone, set bottom padding of banner tagline to 12vh
+						bannerTaglineElemList.forEach((elem) => {
+							elem.style.paddingBottom = "12vh"
+						})
+						bannerImgCreditElemList.forEach((elem) => {
+							elem.style.bottom = "12vh"
+						})
 					}
 
-				}
+					if (isAndroid || isIPhone) {
+						const gapFromBottomSml = viewportHt * 0.02 // 2vh
 
-				const viewportHt = window.visualViewport.height
-				const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
-				const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
+						const redBandCTA_topY = redBandCTAFirstItem
+							.getBoundingClientRect()
+							.top
+						const redBandCTA_botY = redBandCTAFirstItem
+							.getBoundingClientRect()
+							.bottom
+						const redBandCTA_botPadding = redBandCTA_botY - viewportHt
 
-				// if CTA is absent and user agent is iPhone, set bottom padding of banner tagline to 12vh
-				if (Object.is(redBandCTA, null) && isIPhone) {
-					bannerTaglineElemList.forEach((elem) => {
-						elem.style.paddingBottom = "12vh"
-					})
-					bannerImgCreditElemList.forEach((elem) => {
-						elem.style.bottom = "12vh"
-					})
-				}
+						redBandCTAFirstItemStyle.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
 
-				// if CTA is present and user agent is a mobile browser
-				if (!Object.is(redBandCTA, null) && (isAndroid || isIPhone)) {
-					const gapFromBottomSml = viewportHt * 0.02 // 2vh
+						const newRedBandCTA_ht = redBandCTAFirstItem
+							.getBoundingClientRect()
+							.bottom - redBandCTAFirstItem
+							.getBoundingClientRect()
+							.top;
+						// bannerTaglineElemList.forEach((elem) => {
+						// 	elem.style.paddingBottom = gapFromBottomSml.toString() + "px"
+						// 	elem.style.bottom = newRedBandCTA_ht.toString() + "px"
+						// })
 
-					const redBandCTA_topY = redBandCTA
-						.getBoundingClientRect()
-						.top
-					const redBandCTA_botY = redBandCTA
-						.getBoundingClientRect()
-						.bottom
-					const redBandCTA_botPadding = redBandCTA_botY - viewportHt
+						bannerImgCreditElemList.forEach((elem) => {
+							elem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
+						})
+					}
 
-					redBandCTA.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
-
-					const newRedBandCTA_ht = redBandCTA
-						.getBoundingClientRect()
-						.bottom - redBandCTA
-						.getBoundingClientRect()
-						.top;
-					bannerTaglineElemList.forEach((elem) => {
-						elem.style.paddingBottom = gapFromBottomSml.toString() + "px"
-						elem.style.bottom = newRedBandCTA_ht.toString() + "px"
-					})
-
-					bannerImgCreditElemList.forEach((elem) => {
-						elem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
-					})
 				}
 
 				function isSearchBarAtBottom() {
@@ -284,6 +290,27 @@
 					return visualVh < vh
 				}
 			</script>
+
+			{% if vanillaSlider %}
+				<script src="{{ '/utils/vanilla-slideshow.js' | url }}"></script>
+				<script>
+					vanillaSlideshow.init({
+						// auto slideshow, options: true or false
+						slideshow: true,
+						// slideshow delay
+						delay: 2000,
+						// display arrows, options: true or false
+						arrows: true,
+						// display indicators, options: true or false
+						indicators: false,
+						// start slideshow randomly, options: true or false
+						random: false,
+						// animation speed
+						// animationSpeed: '1.75s'
+						animationSpeed: '0.2s'
+					});
+				</script>
+			{% endif %}
 
 			{% if ngpage.pageSettings.scrollToTop or scrollToTop %}
 				<script type="text/javascript">
