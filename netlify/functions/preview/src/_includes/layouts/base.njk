@@ -238,10 +238,6 @@
 						})
 						bannerContainer.style.minHeight = "95.2vh"
 
-						// if CTA is absent and user agent is iPhone, set bottom padding of banner tagline to 12vh
-						bannerTaglineElemList.forEach((elem) => {
-							elem.style.paddingBottom = "12vh"
-						})
 						bannerImgCreditElemList.forEach((elem) => {
 							elem.style.bottom = "12vh"
 						})
@@ -258,7 +254,14 @@
 							.bottom
 						const redBandCTA_botPadding = redBandCTA_botY - viewportHt
 
-						redBandCTAFirstItemStyle.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
+						// CTA is present and isIPhone is true, banner tagline sits atop the redband with padding of 10px
+						bannerTaglineElemList.forEach((elem) => {
+							elem.style.paddingBottom = "10px"
+						})
+
+						redBandCTAList.forEach((elem) => {
+							elem.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
+						})
 
 						const newRedBandCTA_ht = redBandCTAFirstItem
 							.getBoundingClientRect()
