@@ -2,7 +2,10 @@
 
 .image-plus {
     position: relative;
-    border-radius: 12px;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content;
+    background-clip: content-box;
+    // border-radius: 12px;
     overflow: hidden;
     // width: fit-content;
     width: 100%;
@@ -31,7 +34,7 @@
         @include mq(medium) {
             width: 75%;
             margin: 0 auto;
-            border-radius: 12px;
+            // border-radius: 12px;
         }
     }
 
@@ -39,7 +42,7 @@
         @include mqmax(medium) {
             width: 75%;
             margin: 0 auto;
-            border-radius: 12px;
+            // border-radius: 12px;
         }
     }
 
@@ -69,7 +72,7 @@
         @include mqmax(medium) {
             margin: 0 auto;
             width: 100%;
-            border-radius: 12px;
+            // border-radius: 12px;
         }
     }
 
@@ -119,25 +122,25 @@
         }
     }
 
-    &.sharp-left {
-        // make the left edge straight
-        border-radius: 0 12px 12px 0;
-    }
+    // &.sharp-left {
+    //     // make the left edge straight
+    //     border-radius: 0 12px 12px 0;
+    // }
 
-    &.sharp-right {
-        // make the right edge straight
-        border-radius: 12px 0 0 12px;
-    }
+    // &.sharp-right {
+    //     // make the right edge straight
+    //     border-radius: 12px 0 0 12px;
+    // }
 
-    &.sharp-top {
-        // make the top edge straight
-        border-radius: 0 0 12px 12px;
-    }
+    // &.sharp-top {
+    //     // make the top edge straight
+    //     border-radius: 0 0 12px 12px;
+    // }
 
-    &.sharp-bottom {
-        // make the bottom edge straight
-        border-radius: 12px 12px 0 0;
-    }
+    // &.sharp-bottom {
+    //     // make the bottom edge straight
+    //     border-radius: 12px 12px 0 0;
+    // }
 
     &.sharp {
         border-radius: 0;
@@ -145,7 +148,13 @@
 
     &.card {
         font-family: var(--ff-serif);
-        box-shadow: 0 5px 12px 3px hsl(0deg 0% 0% / 0.5);
+        // box-shadow: 0 5px 12px 3px hsl(0deg 0% 0% / 0.25);
+        box-shadow:
+            0 1px 1px hsl(0deg 0% 0% / 0.075),
+            0 2px 2px hsl(0deg 0% 0% / 0.075),
+            0 4px 4px hsl(0deg 0% 0% / 0.075),
+            0 8px 8px hsl(0deg 0% 0% / 0.075),
+            0 16px 16px hsl(0deg 0% 0% / 0.075);
         background-color: rgba(0, 0, 0, 0);
 
         img {
@@ -167,14 +176,14 @@
         @include mqmax(medium) {
             margin: 0 auto;
             width: 100%;
-            border-radius: 12px;
+            // border-radius: 12px;
         }
 
         .card-title {
             position: absolute;
             bottom: 0;
             left: 0;
-            padding-left: 15px;
+            padding-inline: 15px;
             padding-bottom: 15px;
             width: 100%;
             font-size: var(--fs-750);
@@ -194,7 +203,13 @@
         }
 
         &.size-md {
-            box-shadow: 0 4px 8px 2px hsl(0deg 0% 0% / 0.5);
+            // box-shadow: 0 4px 8px 2px hsl(0deg 0% 0% / 0.25);
+            box-shadow:
+                0 1px 1px hsl(0deg 0% 0% / 0.075),
+                0 2px 2px hsl(0deg 0% 0% / 0.075),
+                0 4px 4px hsl(0deg 0% 0% / 0.075),
+                0 8px 8px hsl(0deg 0% 0% / 0.075),
+                0 16px 16px hsl(0deg 0% 0% / 0.075);
 
             .card-title {
                 font-size: var(--fs-600);

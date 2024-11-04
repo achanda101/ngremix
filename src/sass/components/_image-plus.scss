@@ -122,25 +122,25 @@
         }
     }
 
-    &.sharp-left {
-        // make the left edge straight
-        border-radius: 0 12px 12px 0;
-    }
+    // &.sharp-left {
+    //     // make the left edge straight
+    //     border-radius: 0 12px 12px 0;
+    // }
 
-    &.sharp-right {
-        // make the right edge straight
-        border-radius: 12px 0 0 12px;
-    }
+    // &.sharp-right {
+    //     // make the right edge straight
+    //     border-radius: 12px 0 0 12px;
+    // }
 
-    &.sharp-top {
-        // make the top edge straight
-        border-radius: 0 0 12px 12px;
-    }
+    // &.sharp-top {
+    //     // make the top edge straight
+    //     border-radius: 0 0 12px 12px;
+    // }
 
-    &.sharp-bottom {
-        // make the bottom edge straight
-        border-radius: 12px 12px 0 0;
-    }
+    // &.sharp-bottom {
+    //     // make the bottom edge straight
+    //     border-radius: 12px 12px 0 0;
+    // }
 
     &.sharp {
         border-radius: 0;
@@ -183,7 +183,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            padding-left: 15px;
+            padding-inline: 15px;
             padding-bottom: 15px;
             width: 100%;
             font-size: var(--fs-750);

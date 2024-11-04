@@ -41,15 +41,15 @@
     display: block;
     overflow: hidden;
 
-    .image-plus {
-      @include mq(medium) {
-        border-radius: 12px 12px 0 0;
-      }
+    // .image-plus {
+    //   @include mq(medium) {
+    //     border-radius: 12px 12px 0 0;
+    //   }
 
-      @include mq(large) {
-        border-radius: 0 12px 12px 0;
-      }
-    }
+    //   @include mq(large) {
+    //     border-radius: 0 12px 12px 0;
+    //   }
+    // }
 
     @include mqmax(medium) {
       display: none;
@@ -76,7 +76,7 @@
 
   .owl-item,
   .item {
-    border-radius: 12px;
+    // border-radius: 12px;
     overflow: hidden;
   }
 

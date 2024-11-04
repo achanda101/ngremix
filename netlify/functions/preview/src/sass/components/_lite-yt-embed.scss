@@ -8,7 +8,7 @@ lite-youtube {
     contain: content;
     background-position: center center;
     background-size: cover;
-    border-radius: 12px;
+    // border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     max-width: 100%;
@@ -96,13 +96,14 @@ lite-youtube.lyt-activated>.lty-playbtn {
     position: absolute;
     top: 4%;
     left: 0;
-    width: 100%; 
+    width: 100%;
     text-align: center;
     color: hsl(var(--clr-neutral-100));
     font-family: var(--ff-sans);
     font-weight: var(--fw-sans-light);
-    font-size: var(--fs-450); 
+    font-size: var(--fs-450);
     line-height: 1.2;
+
     @include mqmax(small) {
         font-size: var(--fs-300);
         line-height: 1;
