@@ -84,6 +84,7 @@
 
 # Redirects from ngstatic to ngremix Oct 2024
 /thingstodo.html /visit 301
+/thingstodo/ /visit 301
 
 /showtime.html /repertoire 301
 /behindthescenes.html /repertoire 301
@@ -97,5 +98,6 @@
 /popularisingarts#vasant /popularising-the-arts/#vasantahabba 301
 /popularisingarts#ajji /popularising-the-arts/#ajji 301
 /danceprof.html /danceprofessional 301
+/danceprof/ /danceprofessional 301
 
 /vision.html /about 301
