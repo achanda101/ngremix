@@ -226,7 +226,7 @@
 					const ua = navigator
 						.userAgent
 						.toLowerCase()
-					const isAndroid = ua.includes('android')
+					const isAndroid = ua.includes('android') || ua.includes('linux')
 					const isIPhone = ua.includes('iphone')
 					// ipad's user agent only mentions macintosh
 					const isIPad = ua.includes('macintosh')
