@@ -295,9 +295,9 @@ OGImage: "https://res.cloudinary.com/nrityagram/image/upload/v1726534956/pop-the
     <p>
 			During the course of 15 Vasantahabba celebrations, over 200 performers have presented to more than 400,000 people
 			live and thousands more around the world via live-streaming and telecast.
-			<span class="open-modal" id="openModal-vh-performers">
-        <a class="bodylink redtext">Vasantahabba Performers through the years.</a>
-      </span>
+			<!--<span class="open-modal" id="openModal-vh-performers">-->
+        Vasantahabba Performers through the years.
+      <!--</span>-->
       <dialog id="vh-performers" class="modal">
 
         <div class="modal-header">
@@ -439,21 +439,22 @@ OGImage: "https://res.cloudinary.com/nrityagram/image/upload/v1726534956/pop-the
         </div>
       </dialog>
       <script type="text/javascript">
-        const modal = document.querySelector('#vh-performers');
-        const openModal = document.querySelector('#openModal-vh-performers');
-        const closeModal = document.querySelector('#closeModal-vh-performers');
+        const vhModal = document.querySelector('#vh-performers');
+        const openVHModal = document.querySelector('#openModal-vh-performers');
+        const closeVHModal = document.querySelector('#closeModal-vh-performers');
 
-        openModal.addEventListener('click', () => {
-          modal.showModal();
+        openVHModal.addEventListener('click', () => {
+          alert("yo");
+          vhModal.showModal();
         });
 
-        closeModal.addEventListener('click', () => {
-          modal.close();
+        closeVHModal.addEventListener('click', () => {
+          vhModal.close();
         });
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
-          if (modal.open) {
-            modal.close();
+          if (vhModal.open) {
+            vhModal.close();
           }
         }
         // When user presses ESC key, close modal

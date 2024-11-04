@@ -18,6 +18,11 @@
 	padding-top: var(--flow-spacer-h1);
 }
 
+// To compensate for the line-height of first <p>
+.flow:has(>p:first-child) {
+	padding-top: var(--flow-spacer-p);
+}
+
 // To compensate for the line-height of large font <p>
 .flow:has(>p.large:first-child) {
 	padding-top: var(--flow-spacer-large);

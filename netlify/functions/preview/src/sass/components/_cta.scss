@@ -110,18 +110,19 @@
         animation: none;
 
         .cta-line-lrg {
-            padding-top: 0.2rem;
-            font-size: var(--fs-575);
+            padding-top: 0.05rem;
+            font-size: var(--fs-500);
             font-weight: var(--fw-serif-medium);
         }
 
         .cta-line-sml {
             padding-top: 0;
-            font-size: var(--fs-375);
-            font-weight: var(--fw-serif-medium);
+            font-family: var(--ff-sans);
+            font-size: var(--fs-300);
+            font-weight: var(--fw-sans-normal);
 
             &:last-child {
-                padding-bottom: 0.5rem;
+                padding-bottom: 0.2rem;
             }
         }
 
