@@ -56,15 +56,17 @@
     }
 
     // For tablet and below
-    @include mqmax(large) {
-        display: flex;
-        bottom: 20vh;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    // @include mqmax(large) {
+    // @media (orientation: landscape) {
+    //     display: flex;
+    //     bottom: 20vh;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    // }
 
     // For ipad and below, hide it
-    @include mqmax(medium) {
+    // @include mqmax(medium) {
+    @media (orientation: portrait) {
         display: none;
     }
 
@@ -87,7 +89,8 @@
 .cta-mobile {
     display: none;
 
-    @include mqmax(medium) {
+    // @include mqmax(medium) {
+    @media (orientation: portrait) {
         display: block;
         color: hsl(var(--clr-neutral-100));
         text-align: center;
