@@ -277,22 +277,23 @@ $anim-timing: 3s;
     // bottom: 5.75vh;
     left: 46.5%;
     scroll-behavior: smooth; // doesn't work
-    // hide for mobile
+    // hide for portrait orientation
     display: none;
 
     &:hover {
         cursor: pointer;
     }
 
-    @include mq(medium) {
+    @media (orientation: landscape) {
         display: block;
         bottom: 5vh;
         left: 49%;
+
+        @include mq(large) {
+            bottom: 2vh;
+        }
     }
 
-    @include mq(large) {
-        bottom: 2vh;
-    }
 
     opacity: 0;
     // Animation -- fade-in + ease-out

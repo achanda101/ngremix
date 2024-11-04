@@ -202,22 +202,36 @@
 					return (window.getComputedStyle(elem).display !== "none")
 				}
 
+				function isPortrait() {
+					if (screen.orientation && screen.orientation.type) {
+						return screen
+							.orientation
+							.type
+							.startsWith("portrait");
+					} else {
+						// Fallback for older browsers
+						return window.innerWidth < window.innerHeight;
+					}
+				}
+
 				const viewportHt = window.visualViewport.height
 				const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
 				const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
-
-				// Utility Functions to adjust CTA red band width for different mobile user agents
-				const ua = navigator
-					.userAgent
-					.toLowerCase()
-				const isAndroid = ua.includes('android')
-				const isIPhone = (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))
-
 				const redBandCTAList = document.querySelectorAll(".cta-mobile")
 				const isCTAMobileVisible = (redBandCTAList.length > 0) && isVisible(redBandCTAList.item(0))
 
 				// If .cta-mobile selectors are visible
 				if (isCTAMobileVisible) {
+					// Utility Functions to adjust CTA red band width for different mobile user agents
+					const ua = navigator
+						.userAgent
+						.toLowerCase()
+					const isAndroid = ua.includes('android')
+					const isIPhone = ua.includes('iphone')
+					// ipad's user agent only mentions macintosh
+					const isIPad = ua.includes('macintosh')
+					const isIPadMini = ua.includes('ipad')
+
 					const redBandCTAFirstItem = redBandCTAList.item(0)
 					const redBandCTAFirstItemStyle = window.getComputedStyle(redBandCTAFirstItem)
 
@@ -234,16 +248,39 @@
 
 					if (isIPhone) {
 						vanillaSlideList.forEach((elem) => {
-							elem.style.height = "95.2vh"
+							elem.style.height = "107dvh"
 						})
-						bannerContainer.style.minHeight = "95.2vh"
+						bannerContainer.style.minHeight = "107dvh"
 
 						bannerImgCreditElemList.forEach((elem) => {
 							elem.style.bottom = "12vh"
 						})
 					}
 
-					if (isAndroid || isIPhone) {
+					if (isIPad) {
+						vanillaSlideList.forEach((elem) => {
+							elem.style.height = "93dvh"
+						})
+						bannerContainer.style.minHeight = "93dvh"
+						bannerContainer.style.marginBottom = "8dvh"
+
+						bannerImgCreditElemList.forEach((elem) => {
+							elem.style.bottom = "5vh"
+						})
+					}
+
+					if (isIPadMini) {
+						vanillaSlideList.forEach((elem) => {
+							elem.style.height = "100dvh"
+						})
+						bannerContainer.style.minHeight = "100dvh"
+
+						bannerImgCreditElemList.forEach((elem) => {
+							elem.style.bottom = "5vh"
+						})
+					}
+
+					if (isAndroid || isIPhone || isIPad || isIPadMini) {
 						const gapFromBottomSml = viewportHt * 0.02 // 2vh
 
 						const redBandCTA_topY = redBandCTAFirstItem
