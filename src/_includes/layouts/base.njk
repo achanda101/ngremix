@@ -232,8 +232,6 @@
 					const isIPad = ua.includes('macintosh')
 					const isIPadMini = ua.includes('ipad')
 
-					alert(ua)
-
 					const redBandCTAFirstItem = redBandCTAList.item(0)
 					const redBandCTAFirstItemStyle = window.getComputedStyle(redBandCTAFirstItem)
 
@@ -253,10 +251,6 @@
 							elem.style.height = "107dvh"
 						})
 						bannerContainer.style.minHeight = "107dvh"
-
-						bannerImgCreditElemList.forEach((elem) => {
-							elem.style.bottom = "12vh"
-						})
 					}
 
 					if (isIPad) {
@@ -265,10 +259,6 @@
 						})
 						bannerContainer.style.minHeight = "93dvh"
 						bannerContainer.style.marginBottom = "8dvh"
-
-						bannerImgCreditElemList.forEach((elem) => {
-							elem.style.bottom = "5vh"
-						})
 					}
 
 					if (isIPadMini) {
@@ -276,10 +266,6 @@
 							elem.style.height = "100dvh"
 						})
 						bannerContainer.style.minHeight = "100dvh"
-
-						bannerImgCreditElemList.forEach((elem) => {
-							elem.style.bottom = "5vh"
-						})
 					}
 
 					if (isAndroid || isIPhone || isIPad || isIPadMini) {
@@ -311,6 +297,13 @@
 						bannerImgCreditElemList.forEach((elem) => {
 							elem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
 						})
+
+						// icons sidebar
+						const sidebarElem = document.querySelector('sidebar')
+						if (window.getComputedStyle(sidebarElem).flexDirection == "column") {
+							sidebarElem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
+						}
+
 					}
 
 				}
