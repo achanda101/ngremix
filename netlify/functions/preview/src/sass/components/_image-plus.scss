@@ -146,6 +146,7 @@
     &.card {
         font-family: var(--ff-serif);
         box-shadow: 0 5px 12px 3px hsl(0deg 0% 0% / 0.5);
+        background-color: rgba(0, 0, 0, 0);
 
         img {
             aspect-ratio: 1.56;

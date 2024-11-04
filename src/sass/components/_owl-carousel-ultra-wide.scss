@@ -16,7 +16,7 @@
         }
 
         &.rounded {
-            border-radius: 12px;
+            // border-radius: 12px;
             overflow: hidden;
 
             @include mqmax(medium) {
