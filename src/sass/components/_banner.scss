@@ -99,7 +99,7 @@
     bottom: 0;
 
     // background-color: rgba(0, 0, 0, 0.25);
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
 
     padding: 1.5em 0.15em 9vh;
 
@@ -107,7 +107,7 @@
     font-family: var(--ff-serif);
     line-height: 1.3;
     color: hsl(var(--clr-neutral-100));
-    text-shadow: 0 1px 2px hsl(var(--clr-neutral-800));
+    text-shadow: 0 1px 1px hsl(var(--clr-neutral-800));
     text-align: center;
 
     @include mq(medium) {
@@ -115,13 +115,15 @@
         padding-right: 10vw;
         padding-bottom: 8vh;
         font-size: var(--fs-550);
+        letter-spacing: var(--ls-semi-wide);
         line-height: 1.2;
     }
 
     @include mq(large) {
         padding-bottom: 5.7vh;
         // background-color: transparent;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+        // background-image: linear-gradient(to bottom, 
+        // rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3));
         font-size: var(--fs-525);
     }
 
@@ -238,23 +240,21 @@
     line-height: 0.75;
 }
 
-// .banner-tagline-cta-combo {
+.banner-tagline-cta-combo {
+    @include mqmax(medium) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
 
-
-//     @include mqmax(small) {
-//         display: flex;
-//         flex-direction: column;
-//         position: absolute;
-//         left: 0;
-//         bottom: 0;
-//         justify-content: center;
-//         align-items: center;
-
-//         .banner-tagline {
-//             position: static;
-//         }
-//     }
-// }
+        .banner-tagline {
+            position: static;
+        }
+    }
+}
 
 
 // Animated Scroll Arrow (red circle with white arrow inside)
@@ -277,22 +277,23 @@ $anim-timing: 3s;
     // bottom: 5.75vh;
     left: 46.5%;
     scroll-behavior: smooth; // doesn't work
-    // hide for mobile
+    // hide for portrait orientation
     display: none;
 
     &:hover {
         cursor: pointer;
     }
 
-    @include mq(medium) {
+    @media (orientation: landscape) {
         display: block;
         bottom: 5vh;
         left: 49%;
+
+        @include mq(large) {
+            bottom: 2vh;
+        }
     }
 
-    @include mq(large) {
-        bottom: 2vh;
-    }
 
     opacity: 0;
     // Animation -- fade-in + ease-out

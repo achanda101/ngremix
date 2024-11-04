@@ -198,16 +198,43 @@
 					});
 				}
 
-				// Utility Functions to adjust CTA red band width for different mobile user agents
-				const ua = navigator
-					.userAgent
-					.toLowerCase()
-				const isAndroid = ua.includes('android')
-				const isIPhone = (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))
+				function isVisible(elem) {
+					return (window.getComputedStyle(elem).display !== "none")
+				}
 
-				const redBandCTA = document.querySelector(".cta-mobile")
+				function isPortrait() {
+					if (screen.orientation && screen.orientation.type) {
+						return screen
+							.orientation
+							.type
+							.startsWith("portrait");
+					} else {
+						// Fallback for older browsers
+						return window.innerWidth < window.innerHeight;
+					}
+				}
 
-				if (!Object.is(redBandCTA, null)) {
+				const viewportHt = window.visualViewport.height
+				const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
+				const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
+				const redBandCTAList = document.querySelectorAll(".cta-mobile")
+				const isCTAMobileVisible = (redBandCTAList.length > 0) && isVisible(redBandCTAList.item(0))
+
+				// If .cta-mobile selectors are visible
+				if (isCTAMobileVisible) {
+					// Utility Functions to adjust CTA red band width for different mobile user agents
+					const ua = navigator
+						.userAgent
+						.toLowerCase()
+					const isAndroid = ua.includes('android') || ua.includes('linux')
+					const isIPhone = ua.includes('iphone')
+					// ipad's user agent only mentions macintosh
+					const isIPad = ua.includes('macintosh')
+					const isIPadMini = ua.includes('ipad')
+
+					const redBandCTAFirstItem = redBandCTAList.item(0)
+					const redBandCTAFirstItemStyle = window.getComputedStyle(redBandCTAFirstItem)
+
 					const vanillaSlideList = document.querySelectorAll(".vanilla-slide")
 					const bannerContainer = document.querySelector("#banner-container")
 
@@ -221,54 +248,64 @@
 
 					if (isIPhone) {
 						vanillaSlideList.forEach((elem) => {
-							elem.style.height = "95.2vh"
+							elem.style.height = "107dvh"
 						})
-						bannerContainer.style.minHeight = "95.2vh"
+						bannerContainer.style.minHeight = "107dvh"
 					}
 
-				}
+					if (isIPad) {
+						vanillaSlideList.forEach((elem) => {
+							elem.style.height = "93dvh"
+						})
+						bannerContainer.style.minHeight = "93dvh"
+						bannerContainer.style.marginBottom = "8dvh"
+					}
 
-				const viewportHt = window.visualViewport.height
-				const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
-				const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
+					if (isIPadMini) {
+						vanillaSlideList.forEach((elem) => {
+							elem.style.height = "100dvh"
+						})
+						bannerContainer.style.minHeight = "100dvh"
+					}
 
-				// if CTA is absent and user agent is iPhone, set bottom padding of banner tagline to 12vh
-				if (Object.is(redBandCTA, null) && isIPhone) {
-					bannerTaglineElemList.forEach((elem) => {
-						elem.style.paddingBottom = "12vh"
-					})
-					bannerImgCreditElemList.forEach((elem) => {
-						elem.style.bottom = "12vh"
-					})
-				}
+					if (isAndroid || isIPhone || isIPad || isIPadMini) {
+						const gapFromBottomSml = viewportHt * 0.02 // 2vh
 
-				// if CTA is present and user agent is a mobile browser
-				if (!Object.is(redBandCTA, null) && (isAndroid || isIPhone)) {
-					const gapFromBottomSml = viewportHt * 0.02 // 2vh
+						const redBandCTA_topY = redBandCTAFirstItem
+							.getBoundingClientRect()
+							.top
+						const redBandCTA_botY = redBandCTAFirstItem
+							.getBoundingClientRect()
+							.bottom
+						const redBandCTA_botPadding = redBandCTA_botY - viewportHt
 
-					const redBandCTA_topY = redBandCTA
-						.getBoundingClientRect()
-						.top
-					const redBandCTA_botY = redBandCTA
-						.getBoundingClientRect()
-						.bottom
-					const redBandCTA_botPadding = redBandCTA_botY - viewportHt
+						// CTA is present and isIPhone is true, banner tagline sits atop the redband with padding of 10px
+						bannerTaglineElemList.forEach((elem) => {
+							elem.style.paddingBottom = "10px"
+						})
 
-					redBandCTA.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
+						redBandCTAList.forEach((elem) => {
+							elem.style.paddingBottom = redBandCTA_botPadding.toString() + "px"
+						})
 
-					const newRedBandCTA_ht = redBandCTA
-						.getBoundingClientRect()
-						.bottom - redBandCTA
-						.getBoundingClientRect()
-						.top;
-					bannerTaglineElemList.forEach((elem) => {
-						elem.style.paddingBottom = gapFromBottomSml.toString() + "px"
-						elem.style.bottom = newRedBandCTA_ht.toString() + "px"
-					})
+						const newRedBandCTA_ht = redBandCTAFirstItem
+							.getBoundingClientRect()
+							.bottom - redBandCTAFirstItem
+							.getBoundingClientRect()
+							.top;
 
-					bannerImgCreditElemList.forEach((elem) => {
-						elem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
-					})
+						bannerImgCreditElemList.forEach((elem) => {
+							elem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
+						})
+
+						// icons sidebar
+						const sidebarElem = document.querySelector('sidebar')
+						if (window.getComputedStyle(sidebarElem).flexDirection == "column") {
+							sidebarElem.style.bottom = (newRedBandCTA_ht + gapFromBottomSml).toString() + "px"
+						}
+
+					}
+
 				}
 
 				function isSearchBarAtBottom() {
@@ -284,6 +321,27 @@
 					return visualVh < vh
 				}
 			</script>
+
+			{% if vanillaSlider %}
+				<script src="{{ '/utils/vanilla-slideshow.js' | url }}"></script>
+				<script>
+					vanillaSlideshow.init({
+						// auto slideshow, options: true or false
+						slideshow: true,
+						// slideshow delay
+						delay: 2000,
+						// display arrows, options: true or false
+						arrows: true,
+						// display indicators, options: true or false
+						indicators: false,
+						// start slideshow randomly, options: true or false
+						random: false,
+						// animation speed
+						// animationSpeed: '1.75s'
+						animationSpeed: '0.2s'
+					});
+				</script>
+			{% endif %}
 
 			{% if ngpage.pageSettings.scrollToTop or scrollToTop %}
 				<script type="text/javascript">

@@ -9,12 +9,14 @@ var vanillaSlideshow = (function () {
 
   // default properties
   var defaults = {
-    delay: 4000,
+    // delay: 4000,
+    delay: 0,
     arrows: false,
     indicators: true,
     random: false,
     slideshow: true,
-    animationSpeed: "1s",
+    // animationSpeed: "1s",
+    animationSpeed: "0s",
   };
 
   // container divs
@@ -46,13 +48,13 @@ var vanillaSlideshow = (function () {
     var random = defaults.random ? _randomInt(0, slides.length - 1) : 0;
 
     for (var i = 0; i < slides.length; i++) {
-      if (slides[i].getAttribute("data-src") !== null) {
-        slides[i].style.backgroundImage =
-          "url( " + slides[i].getAttribute("data-src") + ")";
+      if (slides[ i ].getAttribute("data-src") !== null) {
+        slides[ i ].style.backgroundImage =
+          "url( " + slides[ i ].getAttribute("data-src") + ")";
       }
 
       if (i === random) {
-        slides[i].className += " vanilla-active";
+        slides[ i ].className += " vanilla-active";
         // metaDataInfo = slides[i].querySelector(".meta-data").dataset;
         // metaDataElem = slides[i].querySelector(".meta-data");
         // if (Object.keys(metaDataInfo).length) {
@@ -60,7 +62,7 @@ var vanillaSlideshow = (function () {
         // }
       }
 
-      _setVendor(slides[i], "Transition", defaults.animationSpeed);
+      _setVendor(slides[ i ], "Transition", defaults.animationSpeed);
     }
   }
 
@@ -69,7 +71,7 @@ var vanillaSlideshow = (function () {
     var active = document.querySelector(
       "#" + slideshow.getAttribute("id") + " .vanilla-active"
     );
-    var next = _nextElement(active) ? _nextElement(active) : slides[0];
+    var next = _nextElement(active) ? _nextElement(active) : slides[ 0 ];
 
     // classes
     active.className = "vanilla-slide";
@@ -88,7 +90,7 @@ var vanillaSlideshow = (function () {
       );
       var nextPointer = _nextElement(activePointer)
         ? _nextElement(activePointer)
-        : app.indicators[0];
+        : app.indicators[ 0 ];
       activePointer.className = activePointer.className.replace(
         /(?:^|\s)vanilla-active(?!\S)/g,
         ""
@@ -106,7 +108,7 @@ var vanillaSlideshow = (function () {
     );
     var previous = _previousElement(active)
       ? _previousElement(active)
-      : slides[slides.length - 1];
+      : slides[ slides.length - 1 ];
 
     // classes
     active.className = "vanilla-slide";
@@ -124,7 +126,7 @@ var vanillaSlideshow = (function () {
       );
       var nextPointer = _previousElement(activePointer)
         ? _previousElement(activePointer)
-        : app.indicators[app.indicators.length - 1];
+        : app.indicators[ app.indicators.length - 1 ];
       activePointer.className = activePointer.className.replace(
         /(?:^|\s)vanilla-active(?!\S)/g,
         ""
@@ -159,7 +161,7 @@ var vanillaSlideshow = (function () {
         _indicatorsClick(this);
       });
       indicators.className = indicatorsContainer;
-      if (_hasClass(slides[i], "vanilla-active")) {
+      if (_hasClass(slides[ i ], "vanilla-active")) {
         indicators.className += " vanilla-active";
       }
     }
@@ -175,23 +177,23 @@ var vanillaSlideshow = (function () {
 
     // remove active classes
     for (var i = 0; i < slides.length; i++) {
-      if (_hasClass(app.indicators[i], "vanilla-active")) {
-        app.indicators[i].className = app.indicators[i].className.replace(
+      if (_hasClass(app.indicators[ i ], "vanilla-active")) {
+        app.indicators[ i ].className = app.indicators[ i ].className.replace(
           /(?:^|\s)vanilla-active(?!\S)/g,
           ""
         );
       }
-      if (_hasClass(slides[i], "vanilla-active")) {
-        slides[i].className = "vanilla-slide";
+      if (_hasClass(slides[ i ], "vanilla-active")) {
+        slides[ i ].className = "vanilla-slide";
       }
     }
 
     // add active class
     var i = Array.prototype.indexOf.call(app.indicators, self);
-    app.indicators[i].className += " vanilla-active";
+    app.indicators[ i ].className += " vanilla-active";
 
     // add classes to slide
-    slides[i].className += " vanilla-active";
+    slides[ i ].className += " vanilla-active";
 
     if (defaults.slideshow) {
       _startSlideshow();
@@ -212,10 +214,10 @@ var vanillaSlideshow = (function () {
 
   // set browser vendor properties
   function _setVendor(element, property, value) {
-    element.style["webkit" + property] = value + " ease-in-out";
-    element.style["Moz" + property] = value + " ease-in-out";
-    element.style["ms" + property] = value + " ease-in-out";
-    element.style["o" + property] = value + " ease-in-out";
+    element.style[ "webkit" + property ] = value + " ease-in-out";
+    element.style[ "Moz" + property ] = value + " ease-in-out";
+    element.style[ "ms" + property ] = value + " ease-in-out";
+    element.style[ "o" + property ] = value + " ease-in-out";
   }
 
   // has class
