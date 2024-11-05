@@ -3,3 +3,16 @@ package = "netlify-plugin-cache"
 
   [plugins.inputs]
   paths = [ "_site/img", ".cache" ]
+
+[[redirects]]
+  from = "/thingstodo"
+  to = "/visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/danceprof"
+  to = "/danceprofessional"
+  status = 301
+  force = true
+
