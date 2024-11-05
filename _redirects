@@ -83,21 +83,16 @@
 /reviews/* /press 301
 
 # Redirects from ngstatic to ngremix Oct 2024
-/thingstodo.html /visit 301
-/thingstodo/ /visit 301
+#/thingstodo.html /visit 301
+#/thingstodo/ /visit 301
 
-/showtime.html /repertoire 301
-/behindthescenes.html /repertoire 301
-/lifeatng.html /repertoire 301
-/downtime.html /repertoire 301
+# /danceaware.html /popularising-the-arts/#danceaware 301
+# /villageoutreach.html /village-outreach 301
+# /supportingartists.html /kula-artistes-residence 301
+# /popularisingarts.html /popularising-the-arts 301
+# /popularisingarts#vasant /popularising-the-arts/#vasantahabba 301
+# /popularisingarts#ajji /popularising-the-arts/#ajji 301
+#/danceprof.html /danceprofessional 301
+#/danceprof/ /danceprofessional 301
 
-/danceaware.html /popularising-the-arts/#danceaware 301
-/villageoutreach.html /village-outreach 301
-/supportingartists.html /kula-artistes-residence 301
-/popularisingarts.html /popularising-the-arts 301
-/popularisingarts#vasant /popularising-the-arts/#vasantahabba 301
-/popularisingarts#ajji /popularising-the-arts/#ajji 301
-/danceprof.html /danceprofessional 301
-/danceprof/ /danceprofessional 301
-
-/vision.html /about 301
+# /vision.html /about 301
