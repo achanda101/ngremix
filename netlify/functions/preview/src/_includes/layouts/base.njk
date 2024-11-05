@@ -244,7 +244,7 @@
 				const bannerTaglineElemList = document.querySelectorAll(".banner-tagline")
 				const bannerImgCreditElemList = document.querySelectorAll(".banner-image-credit")
 				const redBandCTAList = document.querySelectorAll(".cta-mobile")
-				const isCTAMobileVisible = (redBandCTAList.length > 0) && isVisible(redBandCTAList.item(0))
+				const isCTAMobileVisible = redBandCTAList && (redBandCTAList.length > 0) && isVisible(redBandCTAList.item(0))
 
 				// If .cta-mobile selectors are visible
 				if (isCTAMobileVisible) {
@@ -307,7 +307,7 @@
 
 						// CTA is present and isIPhone is true, banner tagline sits atop the redband with padding of 10px
 						bannerTaglineElemList.forEach((elem) => {
-							elem.style.paddingBottom = "10px"
+							elem.style.paddingBottom = "18px"
 						})
 
 						redBandCTAList.forEach((elem) => {
