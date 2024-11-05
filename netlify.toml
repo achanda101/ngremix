@@ -16,3 +16,52 @@ package = "netlify-plugin-cache"
   status = 301
   force = true
 
+[[redirects]]
+  from = "/showtime"
+  to = "/repertoire"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/danceaware"
+  to = "/popularising-the-arts/#danceaware"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/villageoutreach"
+  to = "/village-outreach"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/supportingartists"
+  to = "/kula-artistes-residence"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/popularisingarts"
+  to = "/popularising-the-arts"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/popularisingarts#vasant"
+  to = "/popularising-the-arts/#vasantahabba"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/popularisingarts#ajji"
+  to = "/popularising-the-arts/#ajji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vision"
+  to = "/about"
+  status = 301
+  force = true
+
+
