@@ -13,8 +13,8 @@ body {
 	font-size: var(--fs-450);
 	color: var(--_body-text-color);
 
-	@include mqmax(small) {
-		font-size: var(--fs-530);
+	@include mqmax(medium) {
+		font-size: var(--fs-510);
 	}
 }
 
