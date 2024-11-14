@@ -44,6 +44,8 @@ module.exports = (eleventyConfig) => {
 				metadatalist[ key ] = await eleventyImage(srclist[ key ], {
 					widths: widthslist[ key ] || [ "auto" ],
 					formats,
+					sharpWebpOptions: { quality: 90 },
+					webpQuality: 90,
 					outputDir: path.join(eleventyConfig.dir.output, "img"),
 					urlPath: "/img/",
 				});
