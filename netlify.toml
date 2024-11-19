@@ -63,3 +63,63 @@ from = "/vision"
 to = "/about"
 status = 301
 force = true
+
+[[redirects]]
+from = "/artists/protima/*"
+to = "/protima"
+status = 301
+force = true
+
+[[redirects]]
+from = "/4artists/protima/*"
+to = "/protima"
+status = 301
+force = true
+
+[[redirects]]
+from = "/artists/surupa/*"
+to = "/surupa"
+status = 301
+force = true
+
+[[redirects]]
+from = "/artists/rising/*"
+to = "/pavithra"
+status = 301
+force = true
+
+[[redirects]]
+from = "/4artists/rising/*"
+to = "/pavithra"
+status = 301
+force = true
+
+[[redirects]]
+from = "/artists/ensemble/*"
+to = "/ensemble"
+status = 301
+force = true
+
+[[redirects]]
+from = "/expression/bnatyam/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/6expression/bnatyam/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/expression/odissi/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/6expression/odissi/*"
+to = "/gurukula"
+status = 301
+force = true
