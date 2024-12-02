@@ -58,36 +58,44 @@ OGImage: "https://res.cloudinary.com/nrityagram/image/upload/v1731612592/nov2024
       11AM - 1PM<br />
       ₹1600 per person + ₹20 Convenience Fee<br />
     </p>
-    <div class="even-columns-unlimited center-column-pair">
-      <!-- data-color="a5a5a5" -->
-      <!-- <div class="razorpay-embed-btn column-1"
+    <!--<div class="even-columns-unlimited center-column-pair">
+    <div class="razorpay-embed-btn column-1"
                  data-url="https://pages.razorpay.com/pl_PLGLisooGQ7kPN/view"
                  data-text="Book for Informance on 30 NOV (SOLD OUT)"
                  data-color="#a5a5a5"
-                 data-size="large"></div> -->
-      <div class="razorpay-embed-btn column-2"
+                 data-size="large"></div>
+
+    <div class="razorpay-embed-btn column-2"
                  data-url="https://pages.razorpay.com/pl_PLGPLwCbwRpKUs/view"
                  data-text="Book for Informance on 14 DEC"
                  data-color="#C91D25"
                  data-size="large"></div>
-      <script>
-        (function () {
-          var d = document;
-          var x = !d.getElementById('razorpay-embed-btn-js')
-          if (x) {
-            var s = d.createElement('script');
-            s.defer = !0;
-            s.id = 'razorpay-embed-btn-js';
-            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
-            d
-              .body
-              .appendChild(s);
-          } else {
-            var rzp = window['__rzp__'];
-            rzp && rzp.init && rzp.init()
-          }
-        })();
-      </script>
-    </div>
+  </div>-->
+    <!-- When only one date is available -->
+    <div class="razorpay-embed-btn center"
+                 data-url="https://pages.razorpay.com/pl_PLGPLwCbwRpKUs/view"
+                 data-text="Book for Informance on 14 DEC"
+                 data-color="#C91D25"
+                 data-size="large"></div>
+    <!-- End of one date -->
+
+    <script>
+      (function () {
+        var d = document;
+        var x = !d.getElementById('razorpay-embed-btn-js')
+        if (x) {
+          var s = d.createElement('script');
+          s.defer = !0;
+          s.id = 'razorpay-embed-btn-js';
+          s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+          d
+            .body
+            .appendChild(s);
+        } else {
+          var rzp = window['__rzp__'];
+          rzp && rzp.init && rzp.init()
+        }
+      })();
+    </script>
   </div>
 </div>
