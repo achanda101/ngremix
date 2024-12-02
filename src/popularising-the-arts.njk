@@ -11,7 +11,7 @@ parentMenuItem: "Community"
 title: "Popularising the Arts"
 scrollToTop: true
 description: "Nrityagram has made decades-long efforts to popularise the arts and create safe spaces for it. Nrityagyān is a programme of Dance Awareness set up as part of our policy of popularising the classical arts by Nrityagram. We believe everyone can dance. That dance has the power to engage people and motivate them towards excellence. Nrityagram is a one-of-a-kind collective of artistes, where dance is a way of life."
-OGImage: "https://res.cloudinary.com/nrityagram/image/upload/v1726534956/pop-the-arts-desk_utpqdt.png"
+OGImage: "https://res.cloudinary.com/nrityagram/image/upload/w_200/v1726534956/pop-the-arts-desk_utpqdt.png"
 ---
 <div id="banner-container">
   <div class="banner-image">
@@ -295,9 +295,9 @@ OGImage: "https://res.cloudinary.com/nrityagram/image/upload/v1726534956/pop-the
     <p>
 			During the course of 15 Vasantahabba celebrations, over 200 performers have presented to more than 400,000 people
 			live and thousands more around the world via live-streaming and telecast.
-			<!--<span class="open-modal" id="openModal-vh-performers">-->
+			<span class="open-modal redtext underline" id="openModal-vh-performers">
         Vasantahabba Performers through the years.
-      <!--</span>-->
+      </span>
       <dialog id="vh-performers" class="modal">
 
         <div class="modal-header">
@@ -444,27 +444,12 @@ OGImage: "https://res.cloudinary.com/nrityagram/image/upload/v1726534956/pop-the
         const closeVHModal = document.querySelector('#closeModal-vh-performers');
 
         openVHModal.addEventListener('click', () => {
-          alert("yo");
           vhModal.showModal();
         });
 
         closeVHModal.addEventListener('click', () => {
           vhModal.close();
         });
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-          if (vhModal.open) {
-            vhModal.close();
-          }
-        }
-        // When user presses ESC key, close modal
-        // document.onkeydown = function (evt) {
-        //   if (modal.open && evt.keyCode == 27) {
-        //      Escape key pressed
-        //     console.log("hola")
-        //     modal.close();
-        //   }
-        // };
       </script>
     </p>
     <p>
