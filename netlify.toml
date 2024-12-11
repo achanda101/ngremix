@@ -129,3 +129,47 @@ from = "/6expression/odissi/*"
 to = "/gurukula"
 status = 301
 force = true
+
+[[redirects]]
+from = "/soul/gurukul/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/soul/dream/*"
+to = "/about"
+status = 301
+force = true
+
+[[redirects]]
+from = "/soul/future/*"
+to = "/future"
+status = 301
+force = true
+
+[[redirects]]
+from = "/soul/philosophy/*"
+to = "/about"
+status = 301
+force = true
+
+[[redirects]]
+from = "/passion/habba/*"
+to = "/popularising-the-arts/#vasantahabba"
+status = 301
+force = true
+
+[[redirects]]
+from = "/passion/perform/*"
+to = "/repertoire"
+status = 301
+force = true
+
+[[redirects]]
+from = "/reviews/*"
+to = "/press"
+status = 301
+force = true
+
+
