@@ -83,6 +83,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/artists/bijayini/*"
+to = "/bijayini"
+status = 301
+force = true
+
+[[redirects]]
 from = "/artists/rising/*"
 to = "/pavithra"
 status = 301
