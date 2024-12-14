@@ -171,5 +171,3 @@ from = "/reviews/*"
 to = "/press"
 status = 301
 force = true
-
-
