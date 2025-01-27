@@ -11,7 +11,19 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/thingstodo.html"
+to = "/visit"
+status = 301
+force = true
+
+[[redirects]]
 from = "/danceprof"
+to = "/danceprofessional"
+status = 301
+force = true
+
+[[redirects]]
+from = "/danceprof.html"
 to = "/danceprofessional"
 status = 301
 force = true
@@ -23,7 +35,19 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/showtime.html"
+to = "/repertoire"
+status = 301
+force = true
+
+[[redirects]]
 from = "/danceaware"
+to = "/popularising-the-arts/#danceaware"
+status = 301
+force = true
+
+[[redirects]]
+from = "/danceaware.html"
 to = "/popularising-the-arts/#danceaware"
 status = 301
 force = true
@@ -35,13 +59,31 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/villageoutreach.html"
+to = "/village-outreach"
+status = 301
+force = true
+
+[[redirects]]
 from = "/supportingartists"
 to = "/kula-artistes-residence"
 status = 301
 force = true
 
 [[redirects]]
+from = "/supportingartists.html"
+to = "/kula-artistes-residence"
+status = 301
+force = true
+
+[[redirects]]
 from = "/popularisingarts"
+to = "/popularising-the-arts"
+status = 301
+force = true
+
+[[redirects]]
+from = "/popularisingarts.html"
 to = "/popularising-the-arts"
 status = 301
 force = true
@@ -65,6 +107,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/vision.html"
+to = "/about"
+status = 301
+force = true
+
+[[redirects]]
 from = "/artists/protima/*"
 to = "/protima"
 status = 301
@@ -83,7 +131,19 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/4artists/surupa/*"
+to = "/surupa"
+status = 301
+force = true
+
+[[redirects]]
 from = "/artists/bijayini/*"
+to = "/bijayini"
+status = 301
+force = true
+
+[[redirects]]
+from = "/4artists/bijayini/*"
 to = "/bijayini"
 status = 301
 force = true
@@ -169,5 +229,107 @@ force = true
 [[redirects]]
 from = "/reviews/*"
 to = "/press"
+status = 301
+force = true
+
+[[redirects]]
+from = "/village/friends/*"
+to = "/community"
+status = 301
+force = true
+
+[[redirects]]
+from = "/wisdom/apply/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/2wisdom/apply/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/wisdom/prog/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/2wisdom/prog/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/contact/*"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/lifeatng"
+to = "/community"
+status = 301
+force = true
+
+[[redirects]]
+from = "/village/spaces/guest*"
+to = "/kula-artistes-residence"
+status = 301
+force = true
+
+[[redirects]]
+from = "/village/spaces/office*"
+to = "/space"
+status = 301
+force = true
+
+[[redirects]]
+from = "/village/sponsors*"
+to = "/support"
+status = 301
+force = true
+
+[[redirects]]
+from = "/wisdom/workshops/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/2wisdom/workshops/*"
+to = "/gurukula"
+status = 301
+force = true
+
+[[redirects]]
+from = "/soul/future/"
+to = "/future"
+status = 301
+force = true
+
+[[redirects]]
+from = "/space.*"
+to = "/space"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ngangels.html"
+to = "/support"
+status = 301
+force = true
+
+[[redirects]]
+from = "/friendsofng.html"
+to = "/support"
+status = 301
+force = true
+
+[[redirects]]
+from = "/expression/kathak/*"
+to = "/gurukula"
 status = 301
 force = true
