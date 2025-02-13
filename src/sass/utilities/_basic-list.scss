@@ -1,12 +1,22 @@
 @use '../abstracts/' as *;
 
-ul.basic {
+ul {
     font-family: var(--ff-serif);
     // bullets flush to the left
-	list-style: disc outside;
-	margin-left: -1em;
+    list-style: disc outside;
+    margin-left: -1em;
 
-    margin-top: 0.25em;
+    &.basic {
+        margin-top: 0.25em;
+    }
+
+    &.extra-margin {
+        margin-top: 0.25em;
+
+        >li:not(:first-child) {
+            margin-top: 0.5em;
+        }
+    }
 
     &.no-bullets {
         list-style-type: none;
@@ -19,8 +29,8 @@ ol.basic {
     list-style-position: outside;
     margin-left: -1em;
     margin-block: 0;
+
     li:not(:first-child) {
         margin-top: 0.5em;
     }
 }
-
